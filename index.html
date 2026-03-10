@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fundação Associação dos Amigos de Lagoa do Piauí – Fundação Filiço Teixeira</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --verde: #2d6a4f;
+      --verde-escuro: #1b4332;
+      --verde-claro: #52b788;
+      --dourado: #d4a843;
+      --dourado-claro: #f4d03f;
+      --creme: #faf8f2;
+      --creme-escuro: #f0ebe0;
+      --texto: #1a1a1a;
+      --cinza: #6b6b6b;
+      --branco: #ffffff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--creme);
+      color: var(--texto);
+      overflow-x: hidden;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(27, 67, 50, 0.96);
+      backdrop-filter: blur(8px);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      border-bottom: 2px solid var(--dourado);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 44px;
+      width: auto;
+    }
+
+    .nav-logo-text {
+      font-family: 'Playfair Display', serif;
+      color: var(--dourado);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 220px;
+    }
+
+    .nav-logo-text span {
+      display: block;
+      font-size: 0.68rem;
+      color: rgba(255, 255, 255, 0.7);
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--dourado);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--branco);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      background: var(--verde-escuro);
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(82, 183, 136, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(212, 168, 67, 0.08) 0%, transparent 50%);
+    }
+
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(45deg,
+          transparent, transparent 40px,
+          rgba(255, 255, 255, 0.015) 40px, rgba(255, 255, 255, 0.015) 41px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 8rem 2rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-logo {
+      width: 110px;
+      height: auto;
+      margin-bottom: 1.2rem;
+      display: block;
+      filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.3));
+    }
+
+    .hero-text {
+      animation: fadeUp 0.9s ease both;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--dourado);
+      color: var(--verde-escuro);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 2px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+      color: var(--branco);
+      line-height: 1.15;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-text h1 em {
+      color: var(--dourado);
+      font-style: italic;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.65);
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      margin-bottom: 2rem;
+    }
+
+    .hero-missao {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.75;
+      border-left: 3px solid var(--dourado);
+      padding-left: 1.2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--dourado);
+      color: var(--verde-escuro);
+      padding: 0.85rem 2rem;
+      border-radius: 3px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: all 0.25s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--dourado-claro);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(212, 168, 67, 0.35);
+    }
+
+    .btn-outline {
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      color: var(--branco);
+      padding: 0.85rem 2rem;
+      border-radius: 3px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: all 0.25s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--verde-claro);
+      color: var(--verde-claro);
+    }
+
+    .hero-stats {
+      animation: fadeUp 0.9s 0.2s ease both;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      backdrop-filter: blur(4px);
+      transition: transform 0.25s, border-color 0.25s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--dourado);
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--dourado);
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.4rem;
+    }
+
+    /* ===== SECTIONS BASE ===== */
+    section {
+      padding: 5rem 2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-tag {
+      display: inline-block;
+      color: var(--verde);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      color: var(--verde-escuro);
+      line-height: 1.2;
+    }
+
+    .section-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--dourado);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    /* ===== SOBRE ===== */
+    #sobre {
+      background: var(--creme);
+    }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .sobre-text p {
+      color: var(--cinza);
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .sobre-text p strong {
+      color: var(--verde-escuro);
+    }
+
+    .sobre-info {
+      background: var(--verde-escuro);
+      border-radius: 10px;
+      padding: 2rem;
+      color: var(--branco);
+    }
+
+    .sobre-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--dourado);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.9rem;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .info-label {
+      color: rgba(255, 255, 255, 0.55);
+      font-weight: 300;
+    }
+
+    .info-val {
+      color: var(--branco);
+      font-weight: 600;
+      text-align: right;
+      max-width: 60%;
+    }
+
+    /* ===== AREAS ===== */
+    #areas {
+      background: var(--verde-escuro);
+    }
+
+    #areas .section-tag {
+      color: var(--verde-claro);
+    }
+
+    #areas .section-title {
+      color: var(--branco);
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .area-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 2rem 1.5rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .area-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--dourado);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+
+    .area-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .area-card:hover {
+      border-color: rgba(212, 168, 67, 0.4);
+      transform: translateY(-4px);
+    }
+
+    .area-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .area-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--dourado);
+      margin-bottom: 0.75rem;
+    }
+
+    .area-card p {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.7;
+    }
+
+    /* ===== PROJETOS ===== */
+    #projetos {
+      background: var(--creme-escuro);
+    }
+
+    .projetos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .projeto-card {
+      background: var(--branco);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .projeto-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .projeto-header {
+      background: var(--verde);
+      padding: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .projeto-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--dourado);
+      line-height: 1;
+      opacity: 0.7;
+      flex-shrink: 0;
+    }
+
+    .projeto-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: var(--branco);
+      line-height: 1.35;
+    }
+
+    .projeto-header .ano {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.55);
+      margin-top: 0.25rem;
+    }
+
+    .projeto-body {
+      padding: 1.5rem;
+    }
+
+    .projeto-body p {
+      font-size: 0.92rem;
+      color: var(--cinza);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .projeto-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background: rgba(45, 106, 79, 0.1);
+      color: var(--verde);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.7rem;
+      border-radius: 20px;
+    }
+
+    .tag-value {
+      background: rgba(212, 168, 67, 0.15);
+      color: #8a6a00;
+    }
+
+    /* ===== CERTIFICAÇÕES ===== */
+    #certificacoes {
+      background: var(--creme);
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .cert-card {
+      background: var(--branco);
+      border-radius: 10px;
+      padding: 1.75rem;
+      border-left: 4px solid var(--verde);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      transition: all 0.25s;
+    }
+
+    .cert-card:hover {
+      transform: translateX(4px);
+      border-left-color: var(--dourado);
+    }
+
+    .cert-orgao {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--cinza);
+      margin-bottom: 0.4rem;
+    }
+
+    .cert-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      color: var(--verde-escuro);
+      margin-bottom: 0.5rem;
+    }
+
+    .cert-validade {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(45, 106, 79, 0.1);
+      color: var(--verde);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.25rem 0.7rem;
+      border-radius: 20px;
+    }
+
+    .cert-validade::before {
+      content: '✓';
+    }
+
+    /* ===== GALERIA ===== */
+    #galeria {
+      background: var(--verde-escuro);
+    }
+
+    #galeria .section-tag {
+      color: var(--verde-claro);
+    }
+
+    #galeria .section-title {
+      color: var(--branco);
+    }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .galeria-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      aspect-ratio: 4/3;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .galeria-item:first-child {
+      grid-column: span 2;
+      aspect-ratio: 16/9;
+    }
+
+    .galeria-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .galeria-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .galeria-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(27, 67, 50, 0.85) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem;
+    }
+
+    .galeria-item:hover .galeria-overlay {
+      opacity: 1;
+    }
+
+    .galeria-overlay span {
+      color: var(--branco);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .galeria-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 2rem;
+      gap: 0.5rem;
+    }
+
+    .galeria-placeholder span {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== PARCEIROS ===== */
+    #parceiros {
+      background: var(--creme-escuro);
+    }
+
+    .parceiros-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .parceiro-card {
+      background: var(--branco);
+      border-radius: 8px;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      transition: all 0.25s;
+    }
+
+    .parceiro-card:hover {
+      border-color: var(--verde);
+      box-shadow: 0 4px 20px rgba(45, 106, 79, 0.12);
+      transform: translateY(-3px);
+    }
+
+    .parceiro-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .parceiro-card h4 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--verde-escuro);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      line-height: 1.35;
+    }
+
+    .parceiro-card p {
+      font-size: 0.75rem;
+      color: var(--cinza);
+      margin-top: 0.3rem;
+    }
+
+    /* ===== TRANSPARÊNCIA ===== */
+    #transparencia {
+      background: var(--verde);
+    }
+
+    .transp-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .transp-text .section-tag {
+      color: rgba(255, 255, 255, 0.6);
+      text-align: left;
+      display: block;
+    }
+
+    .transp-text .section-title {
+      color: var(--branco);
+      text-align: left;
+    }
+
+    .transp-text .section-divider {
+      margin-left: 0;
+    }
+
+    .transp-text p {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.75;
+      margin-top: 1.5rem;
+      font-size: 1.02rem;
+    }
+
+    .transp-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .transp-item {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .transp-check {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      background: var(--dourado);
+      color: var(--verde-escuro);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1rem;
+    }
+
+    .transp-item h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--branco);
+      margin-bottom: 0.2rem;
+    }
+
+    .transp-item p {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    /* ===== CONTATO ===== */
+    #contato {
+      background: var(--creme);
+    }
+
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .contato-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--verde-escuro);
+      margin-bottom: 1.5rem;
+    }
+
+    .contato-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .contato-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      background: var(--verde-escuro);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .contato-item h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--cinza);
+      margin-bottom: 0.2rem;
+    }
+
+    .contato-item p {
+      font-size: 1rem;
+      color: var(--texto);
+      font-weight: 600;
+    }
+
+    .contato-form {
+      background: var(--verde-escuro);
+      border-radius: 12px;
+      padding: 2.5rem;
+    }
+
+    .contato-form h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--dourado);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      color: var(--branco);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--dourado);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .form-group select option {
+      background: var(--verde-escuro);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .btn-enviar {
+      width: 100%;
+      background: var(--dourado);
+      color: var(--verde-escuro);
+      border: none;
+      border-radius: 6px;
+      padding: 1rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: all 0.25s;
+      margin-top: 0.5rem;
+    }
+
+    .btn-enviar:hover {
+      background: var(--dourado-claro);
+      transform: translateY(-2px);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--verde-escuro);
+      color: rgba(255, 255, 255, 0.6);
+      padding: 3rem 2rem 2rem;
+      border-top: 3px solid var(--dourado);
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--dourado);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand .cnpj {
+      font-size: 0.78rem;
+      opacity: 0.5;
+      margin-top: 0.5rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-top: 0.75rem;
+    }
+
+    .footer-col h4 {
+      color: var(--branco);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-col ul a {
+      color: rgba(255, 255, 255, 0.55);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul a:hover {
+      color: var(--dourado);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    /* ===== ANIMAÇÕES ===== */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ===== TOAST ===== */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--verde);
+      color: var(--branco);
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      border-left: 4px solid var(--dourado);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.4s;
+      z-index: 9999;
+    }
+
+    .toast.show {
+      transform: none;
+      opacity: 1;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 7rem 1.5rem 3rem;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--verde-escuro);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        gap: 1.5rem;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .sobre-grid,
+      .contato-grid,
+      .transp-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .galeria-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .galeria-item:first-child {
+        grid-column: span 2;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 3.5rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#hero" class="nav-logo">
+      <img src="logo.png" alt="Logo Fundação Associação dos Amigos de Lagoa do Piauí" />
+      <div class="nav-logo-text">
+        Fundação Filiço Teixeira
+        <span>Associação dos Amigos de Lagoa do Piauí</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#areas">Atuação</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#certificacoes">Certificações</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#parceiros">Parceiros</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-badge">Desde 2017 · Lagoa do Piauí – PI</span>
+        <h1>Desenvolvimento <em>Social</em> com Propósito</h1>
+        <p class="hero-subtitle">Fundação Associação dos Amigos de Lagoa do Piauí — Fundação Filiço Teixeira</p>
+        <p class="hero-missao">
+          Promovemos a inclusão social, a formação profissional e o fortalecimento da agricultura familiar,
+          oferecendo oportunidades para jovens, adultos e famílias em situação de vulnerabilidade social.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projetos" class="btn-primary">Nossos Projetos</a>
+          <a href="#contato" class="btn-outline">Fale Conosco</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-num">2017</div>
+          <div class="stat-label">Ano de Fundação</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Projetos Executados</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Certificações Ativas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">8+</div>
+          <div class="stat-label">Parcerias Institucionais</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Quem Somos</span>
+        <h2 class="section-title">Sobre a Entidade</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="sobre-grid">
+        <div class="sobre-text reveal">
+          <p>
+            A <strong>Fundação Associação dos Amigos de Lagoa do Piauí</strong> é uma entidade não governamental,
+            sem fins lucrativos, que atua como organização da sociedade civil comprometida com o
+            <strong>desenvolvimento social, educacional e cultural</strong> do município de Lagoa do Piauí e região.
+          </p>
+          <p>
+            Nossa missão é promover a inclusão social, a formação profissional e o fortalecimento
+            da agricultura familiar, oferecendo oportunidades para jovens, adultos e famílias
+            em situação de vulnerabilidade social.
+          </p>
+          <p>
+            Atuamos em parceria com órgãos públicos municipais, estaduais e federais,
+            desenvolvendo projetos e programas que beneficiam diretamente a população local.
+            Possuímos <strong>Utilidade Pública Municipal</strong> conferida pela Lei nº 121/2021
+            e <strong>Utilidade Pública Estadual</strong> pelas Leis nº 7.820 e 7.821 de 2022.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÁREAS DE ATUAÇÃO -->
+  <section id="areas">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">O que Fazemos</span>
+        <h2 class="section-title" style="color:#fff">Áreas de Atuação</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="areas-grid">
+        <div class="area-card reveal">
+          <div class="area-icon">🤝</div>
+          <h3>Assistência Social</h3>
+          <p>Projetos e benefícios socioassistenciais voltados para jovens, adultos desempregados, mulheres e pessoas em
+            vulnerabilidade social. Incluem cursos profissionalizantes, apoio à geração de renda e inclusão social.</p>
+        </div>
+        <div class="area-card reveal">
+          <div class="area-icon">🌱</div>
+          <h3>Agricultura Familiar</h3>
+          <p>Apoio técnico operacional aos agricultores familiares, capacitação em operação e manutenção de máquinas
+            agrícolas, construção de tanques de peixe e participação em programas como PAA e PNAE.</p>
+        </div>
+        <div class="area-card reveal">
+          <div class="area-icon">📚</div>
+          <h3>Cultura e Educação</h3>
+          <p>Eventos culturais, oficinas temáticas e atividades educacionais para a comunidade. Execução da Lei Paulo
+            Gustavo e publicação de materiais sobre história e patrimônio cultural de Lagoa do Piauí.</p>
+        </div>
+        <div class="area-card reveal">
+          <div class="area-icon">🎨</div>
+          <h3>Produções Audiovisuais</h3>
+          <p>Apoio a artistas locais, bandas musicais, espaços culturais comunitários e produções audiovisuais,
+            fortalecendo a economia criativa e as manifestações culturais do município.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Histórico</span>
+        <h2 class="section-title">Projetos Executados</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="projetos-grid">
+
+        <div class="projeto-card reveal">
+          <div class="projeto-header">
+            <div class="projeto-num">01</div>
+            <div>
+              <h3>Formação Profissional Rural – SENAR</h3>
+              <div class="ano">2019 – 2023</div>
+            </div>
+          </div>
+          <div class="projeto-body">
+            <p>Parceria com o SENAR-PI para cursos de formação profissional rural: Manutenção e Operação de Trator
+              Agrícola, Manejo de Olerícolas, Alimentação Alternativa e mais. Capacitação direta de produtores rurais.
+            </p>
+            <div class="projeto-tags">
+              <span class="tag">SENAR-PI</span>
+              <span class="tag">Agricultura</span>
+              <span class="tag">6 Cursos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card reveal">
+          <div class="projeto-header">
+            <div class="projeto-num">02</div>
+            <div>
+              <h3>Operação e Manutenção de Máquinas Agrícolas – SASC</h3>
+              <div class="ano">2022</div>
+            </div>
+          </div>
+          <div class="projeto-body">
+            <p>Termo de Colaboração nº 16/2022: formação de 20 jovens em situação de vulnerabilidade ou da agricultura
+              familiar, com construção/reforma de 10 tanques de peixe para 10 famílias. Prestação de contas
+              <strong>aprovada</strong> em 30/10/2024.
+            </p>
+            <div class="projeto-tags">
+              <span class="tag">SASC</span>
+              <span class="tag">20 jovens</span>
+              <span class="tag">10 famílias</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card reveal">
+          <div class="projeto-header">
+            <div class="projeto-num">03</div>
+            <div>
+              <h3>Lei Aldir Blanc – Subsídios Culturais</h3>
+              <div class="ano">2020</div>
+            </div>
+          </div>
+          <div class="projeto-body">
+            <p>Gestão de recursos da Lei Aldir Blanc para manutenção de espaços artísticos e culturais. Contemplou 14
+              espaços culturais comunitários do município com subsídio total.</p>
+            <div class="projeto-tags">
+              <span class="tag">Cultura</span>
+              <span class="tag">14 espaços</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card reveal">
+          <div class="projeto-header">
+            <div class="projeto-num">04</div>
+            <div>
+              <h3>Lei Paulo Gustavo – Produções Culturais</h3>
+              <div class="ano">2024</div>
+            </div>
+          </div>
+          <div class="projeto-body">
+            <p>Execução da Lei Paulo Gustavo: oficinas sobre narrativa para alunos do 2º e 3º ano do Ensino Médio e
+              lançamento do livro "Lagoa do Piauí: Conhecendo a Pátria Querida" em parceria com a comunidade escolar.
+            </p>
+            <div class="projeto-tags">
+              <span class="tag">Cultura</span>
+              <span class="tag">Educação</span>
+              <span class="tag">Ensino Médio</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card reveal">
+          <div class="projeto-header">
+            <div class="projeto-num">05</div>
+            <div>
+              <h3>Evento Cultural "Lagoa Live"</h3>
+              <div class="ano">2020</div>
+            </div>
+          </div>
+          <div class="projeto-body">
+            <p>Organização e realização do evento Lagoa Live em dezembro de 2020, em parceria com o Conselho Municipal
+              de Cultura, reconhecendo trabalhadores culturais do município — de YouTubers a vaqueiros aboladores.</p>
+            <div class="projeto-tags">
+              <span class="tag">Evento</span>
+              <span class="tag">Cultura Local</span>
+              <span class="tag">Artistas Locais</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICAÇÕES -->
+  <section id="certificacoes">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Regularidade</span>
+        <h2 class="section-title">Certificações e Títulos</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card reveal">
+          <div class="cert-orgao">Municipal</div>
+          <h3>Utilidade Pública Municipal</h3>
+          <span class="cert-validade">Lei nº 121/2021 de 11/06/2021</span>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-orgao">Estadual</div>
+          <h3>Utilidade Pública Estadual</h3>
+          <span class="cert-validade">Leis nº 7.820 e 7.821 de 24/06/2022</span>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-orgao">SASC – Assistência Social</div>
+          <h3>Credenciamento SASC</h3>
+          <span class="cert-validade">Válido até 11/04/2027</span>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-orgao">SECULT – Cultura</div>
+          <h3>Carteira de Habilitação nº 11308/2024</h3>
+          <span class="cert-validade">Válida até 22/10/2028</span>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-orgao">SAF – Agricultura Familiar</div>
+          <h3>Credenciamento PAS – Edital 002/2024</h3>
+          <span class="cert-validade">Credenciada ativa</span>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-orgao">Governo Federal</div>
+          <h3>Habilitação Transferegov</h3>
+          <span class="cert-validade">Regularidade ativa – 16/07/2025</span>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-orgao">CMAS</div>
+          <h3>Inscrição no Conselho Municipal de Assistência Social</h3>
+          <span class="cert-validade">Inscrição nº 01/2025</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Registros</span>
+        <h2 class="section-title">Galeria de Fotos</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="galeria-grid">
+        <div class="galeria-item reveal">
+          <img src="foto1.jpg" alt="Promoção do Curso"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="galeria-placeholder" style="display:none">📸<span>Promoção do Curso</span></div>
+          <div class="galeria-overlay"><span>Curso de Formação Profissional</span></div>
+        </div>
+        <div class="galeria-item reveal">
+          <img src="foto2.jpeg" alt="Promoção do Curso"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="galeria-placeholder" style="display:none">📸<span>Promoção do Curso</span></div>
+          <div class="galeria-overlay"><span>Curso de Formação Profissional</span></div>
+        </div>
+        <div class="galeria-item reveal">
+          <img src="foto3.jpg" alt="Promoção do Curso"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="galeria-placeholder" style="display:none">📸<span>Promoção do Curso</span></div>
+          <div class="galeria-overlay"><span>Curso de Formação Profissional</span></div>
+        </div>
+        <div class="galeria-item reveal">
+          <img src="foto_curso1.jpg" alt="Foto do Curso"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="galeria-placeholder" style="display:none">📷<span>Foto do Curso</span></div>
+          <div class="galeria-overlay"><span>Curso de Formação Profissional</span></div>
+        </div>
+        <div class="galeria-item reveal">
+          <img src="foto_curso2.jpg" alt="Foto do Curso 2"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="galeria-placeholder" style="display:none">🎓<span>Foto do Curso 2</span></div>
+          <div class="galeria-overlay"><span>Participantes da Formação Profissional</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSPARÊNCIA -->
+  <section id="transparencia">
+    <div class="container">
+      <div class="transp-inner">
+        <div class="transp-text reveal">
+          <span class="section-tag">Prestação de Contas</span>
+          <h2 class="section-title">Transparência e Regularidade</h2>
+          <div class="section-divider" style="margin-left:0"></div>
+          <p>Mantemos rigoroso compromisso com a transparência e a boa gestão dos recursos públicos e privados. Todas as
+            nossas prestações de contas são realizadas tempestivamente e aprovadas pelos órgãos competentes.</p>
+        </div>
+        <div class="transp-items reveal">
+          <div class="transp-item">
+            <div class="transp-check">✓</div>
+            <div>
+              <h4>Termo de Colaboração 16/2022 (SASC)</h4>
+              <p>Prestação de contas <strong>aprovada</strong> em 30/10/2024</p>
+            </div>
+          </div>
+          <div class="transp-item">
+            <div class="transp-check">✓</div>
+            <div>
+              <h4>Contas Regulares SASC e FECOP</h4>
+              <p>Declaração de regularidade emitida em 2022</p>
+            </div>
+          </div>
+          <div class="transp-item">
+            <div class="transp-check">✓</div>
+            <div>
+              <h4>Transferegov – Plataforma Federal</h4>
+              <p>Sem irregularidades cadastradas (consulta 16/07/2025)</p>
+            </div>
+          </div>
+          <div class="transp-item">
+            <div class="transp-check">✓</div>
+            <div>
+              <h4>Demais Plataformas Governamentais</h4>
+              <p>Ausência de irregularidades em todos os sistemas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARCEIROS -->
+  <section id="parceiros">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Rede de Apoio</span>
+        <h2 class="section-title">Parceiros Institucionais</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="parceiros-grid">
+        <div class="parceiro-card reveal">
+          <div class="parceiro-icon">🏛️</div>
+          <h4>Prefeitura Municipal de Lagoa do Piauí</h4>
+          <p>Parceria municipal</p>
+        </div>
+        <div class="parceiro-card reveal">
+          <div class="parceiro-icon">🤲</div>
+          <h4>SASC</h4>
+          <p>Secretaria de Assistência Social e Cidadania</p>
+        </div>
+        <div class="parceiro-card reveal">
+          <div class="parceiro-icon">🎭</div>
+          <h4>SECULT</h4>
+          <p>Secretaria de Estado da Cultura</p>
+        </div>
+        <div class="parceiro-card reveal">
+          <div class="parceiro-icon">🌾</div>
+          <h4>SAF</h4>
+          <p>Secretaria da Agricultura Familiar</p>
+        </div>
+        <div class="parceiro-card reveal">
+          <div class="parceiro-icon">📖</div>
+          <h4>SENAR-PI</h4>
+          <p>Serviço Nacional de Aprendizagem Rural</p>
+        </div>
+        <div class="parceiro-card reveal">
+          <div class="parceiro-icon">💰</div>
+          <h4>FECOP</h4>
+          <p>Fundo Estadual de Combate à Pobreza</p>
+        </div>
+        <div class="parceiro-card reveal">
+          <div class="parceiro-icon">👥</div>
+          <h4>CMAS</h4>
+          <p>Conselho Municipal de Assistência Social</p>
+        </div>
+        <div class="parceiro-card reveal">
+          <div class="parceiro-icon">🏫</div>
+          <h4>Conselhos Municipais</h4>
+          <p>Cultura, Educação e demais conselhos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Fale Conosco</span>
+        <h2 class="section-title">Contato</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="contato-grid">
+        <div class="contato-info reveal">
+          <h3>Informações de Contato</h3>
+          <div class="contato-item">
+            <div class="contato-icon">📍</div>
+            <div>
+              <h4>Endereço</h4>
+              <p>Rua Joana Maria de Alencar, 93<br>Próximo à BR-316, Bairro Centro<br>Lagoa do Piauí – PI · CEP
+                64.388-000</p>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-icon">🪪</div>
+            <div>
+              <h4>CNPJ</h4>
+              <p>28.295.504/0001-03</p>
+            </div>
+          </div>
+          <div class="contato-item">
+          </div>
+        </div>
+      </div>
+
+      <div class="contato-form reveal">
+        <h3>Envie uma Mensagem</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nome</label>
+            <input type="text" id="nome" placeholder="Seu nome completo" />
+          </div>
+          <div class="form-group">
+            <label>Telefone</label>
+            <input type="tel" id="telefone" placeholder="(00) 00000-0000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>E-mail</label>
+          <input type="email" id="email" placeholder="seu@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Assunto</label>
+          <select id="assunto">
+            <option value="">Selecione o assunto</option>
+            <option>Parceria Institucional</option>
+            <option>Informações sobre Projetos</option>
+            <option>Assistência Social</option>
+            <option>Agricultura Familiar</option>
+            <option>Cultura e Educação</option>
+            <option>Outros</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Mensagem</label>
+          <textarea id="mensagem" placeholder="Descreva como podemos ajudar..."></textarea>
+        </div>
+        <button class="btn-enviar" onclick="enviarMensagem()">Enviar Mensagem</button>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-text">Fundação Filiço Teixeira</div>
+          <p>Associação dos Amigos de Lagoa do Piauí — entidade sem fins lucrativos comprometida com o desenvolvimento
+            social, educacional e cultural da comunidade.</p>
+          <p class="cnpj">CNPJ: 28.295.504/0001-03</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#sobre">Sobre a Entidade</a></li>
+            <li><a href="#areas">Áreas de Atuação</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#certificacoes">Certificações</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#parceiros">Parceiros</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Atuação</h4>
+          <ul>
+            <li><a href="#areas">Assistência Social</a></li>
+            <li><a href="#areas">Agricultura Familiar</a></li>
+            <li><a href="#areas">Cultura e Educação</a></li>
+            <li><a href="#areas">Produções Audiovisuais</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Fundação Associação dos Amigos de Lagoa do Piauí – Fundação Filiço Teixeira. Todos os direitos
+          reservados.</span>
+        <span>Lagoa do Piauí – PI</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">✅ Mensagem enviada! Entraremos em contato em breve.</div>
+
+  <script>
+    // ===== SCROLL REVEAL =====
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {if (e.isIntersecting) {e.target.classList.add('visible');} });
+    }, {threshold: 0.1, rootMargin: '0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ===== NAVBAR MOBILE =====
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+    });
+
+    // ===== SMOOTH ACTIVE NAV =====
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {if (window.scrollY >= s.offsetTop - 100) current = s.id;});
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + current ? 'var(--dourado)' : '';
+      });
+    });
+
+    // ===== CONTATO FORM =====
+    function enviarMensagem() {
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+      if (!nome || !email || !mensagem) {
+        alert('Por favor, preencha Nome, E-mail e Mensagem.');
+        return;
+      }
+      const assunto = document.getElementById('assunto').value || 'Contato pelo site';
+      const telefone = document.getElementById('telefone').value;
+      const corpo = `Nome: ${nome}%0ATelefone: ${telefone}%0AAssunto: ${assunto}%0A%0AMensagem:%0A${encodeURIComponent(mensagem)}`;
+      window.location.href = `mailto:associacaoamigosdeLagoa@email.com?subject=${encodeURIComponent(assunto)}&body=${corpo}`;
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 4000);
+    }
+  </script>
+</body>
+
+</html>
