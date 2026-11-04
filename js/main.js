@@ -8,13 +8,14 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // ===== NAVBAR MOBILE =====
 const navLinks = document.getElementById('navLinks');
+const menu = navLinks.closest('.menu');
 const hamburger = document.getElementById('hamburger');
 function setMenu(open) {
-  navLinks.classList.toggle('open', open);
+  menu.classList.toggle('open', open);
   hamburger.setAttribute('aria-expanded', open);
   hamburger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
 }
-hamburger.addEventListener('click', () => setMenu(!navLinks.classList.contains('open')));
+hamburger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
 navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
 // ===== SMOOTH ACTIVE NAV =====
@@ -31,16 +32,35 @@ window.addEventListener('scroll', () => {
   if (!ticking) {requestAnimationFrame(updateActiveNav); ticking = true;}
 }, {passive: true});
 
-// ===== GALERIA (FOTO INDISPONÍVEL) =====
-function mostrarPlaceholder(img) {
-  img.style.display = 'none';
-  img.nextElementSibling.style.display = 'flex';
+// ===== DESTAQUES (CARROSSEL) =====
+// Troca só quando a pessoa clica: sem passagem automática
+const heroTrilho = document.getElementById('heroTrilho');
+const heroSlides = heroTrilho.querySelectorAll('.hero-slide');
+const heroPontos = document.querySelectorAll('.hero-pontos button');
+let heroAtual = 0;
+function irPara(indice) {
+  heroAtual = (indice + heroSlides.length) % heroSlides.length;
+  heroTrilho.style.transform = `translateX(-${heroAtual * 100}%)`;
+  heroSlides.forEach((slide, i) => {
+    const ativo = i === heroAtual;
+    slide.setAttribute('aria-hidden', !ativo);
+    // Links e botões de slides escondidos saem da ordem do Tab
+    slide.querySelectorAll('a, button').forEach(el => el.tabIndex = ativo ? 0 : -1);
+  });
+  heroPontos.forEach((p, i) => p.setAttribute('aria-selected', i === heroAtual));
 }
-document.querySelectorAll('.galeria-item img').forEach(img => {
-  // A imagem pode ter falhado antes deste script carregar
-  if (img.complete && img.naturalWidth === 0) mostrarPlaceholder(img);
-  else img.addEventListener('error', () => mostrarPlaceholder(img));
+document.querySelector('.hero-anterior').addEventListener('click', () => irPara(heroAtual - 1));
+document.querySelector('.hero-proximo').addEventListener('click', () => irPara(heroAtual + 1));
+heroPontos.forEach((p, i) => p.addEventListener('click', () => irPara(i)));
+let toqueInicio = null;
+heroTrilho.addEventListener('touchstart', e => {toqueInicio = e.touches[0].clientX;}, {passive: true});
+heroTrilho.addEventListener('touchend', e => {
+  if (toqueInicio === null) return;
+  const delta = e.changedTouches[0].clientX - toqueInicio;
+  if (Math.abs(delta) > 50) irPara(heroAtual + (delta < 0 ? 1 : -1));
+  toqueInicio = null;
 });
+irPara(0);
 
 // ===== GALERIA (LIGHTBOX) =====
 const lightbox = document.getElementById('lightbox');
@@ -48,7 +68,7 @@ const lightboxImg = document.getElementById('lightboxImg');
 const lightboxCaption = document.getElementById('lightboxCaption');
 function abrirFoto(item) {
   const img = item.querySelector('img');
-  if (!img || img.style.display === 'none' || !lightbox.showModal) return;
+  if (!img || !lightbox.showModal) return;
   lightboxImg.src = img.src;
   lightboxImg.alt = img.alt;
   lightboxCaption.textContent = item.querySelector('figcaption').textContent;

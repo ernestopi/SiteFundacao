@@ -7,7 +7,7 @@
   <title>Fundação Associação dos Amigos de Lagoa do Piauí – Fundação Filiço Teixeira</title>
   <meta name="description"
     content="Entidade sem fins lucrativos de Lagoa do Piauí – PI que atua em assistência social, agricultura familiar, cultura e educação desde 2017." />
-  <meta name="theme-color" content="#1b4332" />
+  <meta name="theme-color" content="#0141ab" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
   <meta property="og:type" content="website" />
@@ -28,6 +28,7 @@
       "taxID": "28.295.504/0001-03",
       "email": "associacaofundacaofteixeira@gmail.com",
       "logo": "logo.png",
+      "sameAs": ["https://www.instagram.com/fundacaoafteixeira/"],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Joana Maria Alencar, 93, Bairro Modelo",
@@ -40,8 +41,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;600&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -49,532 +49,589 @@
 <body>
   <script>document.documentElement.classList.add('js');</script>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="#hero" class="nav-logo">
-      <img src="img/logo-emblema.png" alt="Logo Fundação Associação Filiço Teixeira" width="68" height="44" />
-      <div class="nav-logo-text">
-        Fundação Filiço Teixeira
-        <span>Associação dos Amigos de Lagoa do Piauí</span>
-      </div>
-    </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#areas">Atuação</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#capacitar">Capacitar</a></li>
-      <li><a href="#certificacoes">Certificações</a></li>
-      <li><a href="#galeria">Galeria</a></li>
-      <li><a href="#transparencia">Transparência</a></li>
-      <li><a href="#parceiros">Parceiros</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menu" aria-controls="navLinks"
-      aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <!-- ÍCONES -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-seta" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+    <symbol id="i-mao" viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.3-9A5.2 5.2 0 0 1 12 6.4 5.2 5.2 0 0 1 21.3 12C19 16.6 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></symbol>
+    <symbol id="i-broto" viewBox="0 0 24 24"><path d="M12 21v-9m0 0C12 7 8.5 4 4 4c0 4.5 3 8 8 8Zm0 0c0-4 3-7 8-7 0 4-3 7-8 7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+    <symbol id="i-livro" viewBox="0 0 24 24"><path d="M3 5.5C5.5 4 9 4 12 6c3-2 6.5-2 9-.5V19c-2.5-1.5-6-1.5-9 .5-3-2-6.5-2-9-.5V5.5ZM12 6v13.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 7h12v10H3zM15 10.5 21 7v10l-6-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z" fill="currentColor" /><circle cx="12" cy="9.5" r="2.6" fill="#1e9a32" /></symbol>
+    <symbol id="i-email" viewBox="0 0 24 24"><path d="M3 6h18v12H3z" fill="currentColor" /><path d="m3.5 6.5 8.5 7 8.5-7" fill="none" stroke="#1e9a32" stroke-width="1.6" /></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z" fill="currentColor" /><path d="M9 12h6M9 15.5h6M9 8.5h3" stroke="#1e9a32" stroke-width="1.6" stroke-linecap="round" /></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" /></symbol>
+  </svg>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-pattern"></div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <img class="hero-logo" src="img/logo-completo.png" alt="Fundação Associação Filiço Teixeira" width="800"
-          height="431" decoding="async" />
-        <span class="hero-badge">Desde 2017 · Lagoa do Piauí – PI</span>
-        <h1>Desenvolvimento <em>Social</em> com Propósito</h1>
-        <p class="hero-subtitle">Fundação Associação dos Amigos de Lagoa do Piauí — Fundação Filiço Teixeira</p>
-        <p class="hero-missao">
-          Promovemos a inclusão social, a formação profissional e o fortalecimento da agricultura familiar,
-          oferecendo oportunidades para jovens, adultos e famílias em situação de vulnerabilidade social.
-        </p>
-        <div class="hero-ctas">
-          <a href="#projetos" class="btn-primary">Nossos Projetos</a>
-          <a href="#contato" class="btn-outline">Fale Conosco</a>
-        </div>
+  <!-- CABEÇALHO -->
+  <header class="topo" id="topo">
+    <div class="topo-inner">
+      <a href="#inicio" class="topo-logo" aria-label="Fundação Filiço Teixeira – início">
+        <img src="img/logo-completo.png" alt="Fundação Associação Filiço Teixeira" width="800" height="431" />
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <ul id="navLinks">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Quem Somos</a></li>
+          <li><a href="#areas">Atuação</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#capacitar">Capacitar</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#transparencia">Transparência</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="topo-acoes">
+        <a href="#contato" class="btn btn-contorno">Seja Parceiro <svg><use href="#i-seta" /></svg></a>
+        <a href="#contato" class="btn btn-azul">Fale Conosco <svg><use href="#i-seta" /></svg></a>
       </div>
-      <div class="hero-stats">
-        <div class="stat-card">
-          <div class="stat-num">2017</div>
-          <div class="stat-label">Ano de Fundação</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">5+</div>
-          <div class="stat-label">Projetos Executados</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">7</div>
-          <div class="stat-label">Certificações e Títulos</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">8+</div>
-          <div class="stat-label">Parcerias Institucionais</div>
-        </div>
-      </div>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menu" aria-controls="navLinks"
+        aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </section>
+  </header>
 
-  <!-- SOBRE -->
-  <section id="sobre">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Quem Somos</span>
-        <h2 class="section-title">Sobre a Entidade</h2>
-        <div class="section-divider"></div>
+  <main>
+    <!-- DESTAQUES -->
+    <section id="inicio" class="hero" aria-roledescription="carrossel" aria-label="Destaques">
+      <div class="hero-painel">
+        <div class="hero-trilho" id="heroTrilho">
+
+          <article class="hero-slide" aria-roledescription="slide" aria-label="1 de 3">
+            <div class="hero-texto">
+              <img class="hero-logo" src="img/logo-completo.png" alt="Fundação Associação Filiço Teixeira" width="800"
+                height="431" />
+              <span class="eyebrow">Desde 2017 · Lagoa do Piauí – PI</span>
+              <h1>Desenvolvimento social com propósito em Lagoa do Piauí.</h1>
+              <div class="traco"></div>
+              <p>Promovemos a inclusão social, a formação profissional e o fortalecimento da agricultura familiar,
+                oferecendo oportunidades para jovens, adultos e famílias em situação de vulnerabilidade social.</p>
+              <a href="#projetos" class="btn btn-azul">Ver projetos <svg><use href="#i-seta" /></svg></a>
+            </div>
+            <div class="hero-foto">
+              <img src="img/capacitar/turma-trator.jpg" alt="Participantes do curso com fardamento azul reunidos com a equipe da Fundação em frente ao trator"
+                width="1600" height="1067" fetchpriority="high" />
+            </div>
+          </article>
+
+          <article class="hero-slide" aria-roledescription="slide" aria-label="2 de 3">
+            <div class="hero-texto">
+              <span class="eyebrow">Projeto em andamento</span>
+              <h2 class="hero-titulo">Capacitar e Produzir: qualificação que vira trabalho e renda.</h2>
+              <div class="traco"></div>
+              <p>30 adolescentes, jovens e adultos qualificados em operação e manutenção de máquinas agrícolas, com
+                recursos do FECOP e parceria com a SEIPS/SASC-PI.</p>
+              <a href="#capacitar" class="btn btn-azul">Conheça o projeto <svg><use href="#i-seta" /></svg></a>
+            </div>
+            <div class="hero-foto">
+              <img src="img/capacitar/aula-campo.jpg" alt="Turma de capacete acompanhando a demonstração de operação do trator no campo"
+                width="1200" height="1600" loading="lazy" />
+            </div>
+          </article>
+
+          <article class="hero-slide" aria-roledescription="slide" aria-label="3 de 3">
+            <div class="hero-texto">
+              <span class="eyebrow">Regularidade e transparência</span>
+              <h2 class="hero-titulo">Utilidade pública municipal e estadual, com contas aprovadas.</h2>
+              <div class="traco"></div>
+              <p>Prestações de contas aprovadas e certificações ativas junto a órgãos municipais, estaduais e
+                federais.</p>
+              <a href="#transparencia" class="btn btn-azul">Ver transparência <svg><use href="#i-seta" /></svg></a>
+            </div>
+            <div class="hero-foto">
+              <img src="foto_curso2.jpg" alt="Participantes da formação profissional reunidos" width="1288" height="952"
+                loading="lazy" />
+            </div>
+          </article>
+
+        </div>
+        <button class="hero-seta hero-anterior" type="button" aria-label="Destaque anterior">‹</button>
+        <button class="hero-seta hero-proximo" type="button" aria-label="Próximo destaque">›</button>
       </div>
-      <div class="sobre-text reveal">
+      <div class="hero-pontos" role="tablist" aria-label="Escolher destaque">
+        <button type="button" role="tab" aria-label="Destaque 1" aria-selected="true"></button>
+        <button type="button" role="tab" aria-label="Destaque 2" aria-selected="false"></button>
+        <button type="button" role="tab" aria-label="Destaque 3" aria-selected="false"></button>
+      </div>
+    </section>
+
+    <!-- CHAMADAS -->
+    <section class="chamadas" aria-label="Participe">
+      <div class="chamada chamada-foto">
+        <img src="img/capacitar/aluno-trator.jpg" alt="Participante operando o trator em aula prática" width="1200"
+          height="1600" loading="lazy" />
+      </div>
+      <div class="chamada chamada-escura reveal">
+        <h3>Faça parte da transformação que acontece em Lagoa do Piauí</h3>
+        <div class="traco"></div>
+        <p>Nossos projetos geram formação, renda e novas oportunidades para quem mais precisa.</p>
+        <a href="#projetos" class="btn btn-azul">Conheça os projetos <svg><use href="#i-seta" /></svg></a>
+      </div>
+      <div class="chamada chamada-verde reveal">
+        <h3>Instituições que transformam deixam legado</h3>
+        <div class="traco traco-branco"></div>
+        <p>Seja parceiro institucional e invista em impacto social com transparência e resultados reais.</p>
+        <a href="#contato" class="btn btn-contorno-branco">Quero ser parceiro <svg><use href="#i-seta" /></svg></a>
+      </div>
+    </section>
+
+    <!-- QUEM SOMOS -->
+    <section id="sobre" class="secao">
+      <div class="container sobre-grid">
+        <div class="sobre-fotos reveal" aria-hidden="true">
+          <img class="sobre-foto sobre-foto-1" src="foto_curso1.jpg" alt="" width="1008" height="756" loading="lazy" />
+          <img class="sobre-foto sobre-foto-2" src="img/capacitar/turma-microtrator.jpg" alt="" width="1600"
+            height="1200" loading="lazy" />
+          <img class="sobre-foto sobre-foto-3" src="img/logo-emblema.png" alt="" width="160" height="104"
+            loading="lazy" />
+        </div>
+        <div class="sobre-cartao reveal">
+          <span class="eyebrow">Quem somos</span>
+          <h2 class="titulo">Juntos por uma Lagoa do Piauí com mais oportunidades</h2>
+          <div class="traco"></div>
           <p>
-            A <strong>Fundação Associação dos Amigos de Lagoa do Piauí</strong> é uma entidade não governamental,
-            sem fins lucrativos, que atua como organização da sociedade civil comprometida com o
-            <strong>desenvolvimento social, educacional e cultural</strong> do município de Lagoa do Piauí e região.
+            A <strong>Fundação Associação dos Amigos de Lagoa do Piauí</strong> é uma entidade não governamental, sem
+            fins lucrativos, comprometida com o <strong>desenvolvimento social, educacional e cultural</strong> do
+            município de Lagoa do Piauí e região.
           </p>
           <p>
-            Nossa missão é promover a inclusão social, a formação profissional e o fortalecimento
-            da agricultura familiar, oferecendo oportunidades para jovens, adultos e famílias
-            em situação de vulnerabilidade social.
+            Atuamos em parceria com órgãos públicos municipais, estaduais e federais, desenvolvendo projetos que
+            beneficiam diretamente a população local. Possuímos <strong>Utilidade Pública Municipal</strong> (Lei nº
+            121/2021) e <strong>Utilidade Pública Estadual</strong> (Leis nº 7.820 e 7.821 de 2022).
           </p>
-          <p>
-            Atuamos em parceria com órgãos públicos municipais, estaduais e federais,
-            desenvolvendo projetos e programas que beneficiam diretamente a população local.
-            Possuímos <strong>Utilidade Pública Municipal</strong> conferida pela Lei nº 121/2021
-            e <strong>Utilidade Pública Estadual</strong> pelas Leis nº 7.820 e 7.821 de 2022.
-          </p>
+          <a href="#areas" class="btn btn-azul">Conheça nossa atuação <svg><use href="#i-seta" /></svg></a>
+        </div>
       </div>
-    </div>
-  </section>
+      <div class="container numeros">
+        <div class="numero reveal">
+          <strong>2017</strong>
+          <div class="traco"></div>
+          <span>ano de fundação</span>
+        </div>
+        <div class="numero reveal">
+          <strong>6</strong>
+          <div class="traco"></div>
+          <span>projetos executados e em andamento</span>
+        </div>
+        <div class="numero reveal">
+          <strong>7</strong>
+          <div class="traco"></div>
+          <span>certificações e títulos</span>
+        </div>
+        <div class="numero reveal">
+          <strong>8+</strong>
+          <div class="traco"></div>
+          <span>parcerias institucionais</span>
+        </div>
+      </div>
+    </section>
 
-  <!-- ÁREAS DE ATUAÇÃO -->
-  <section id="areas">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">O que Fazemos</span>
-        <h2 class="section-title">Áreas de Atuação</h2>
-        <div class="section-divider"></div>
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section id="areas" class="secao secao-cinza">
+      <div class="container">
+        <div class="cabecalho reveal">
+          <span class="eyebrow">O que fazemos</span>
+          <h2 class="titulo">Quatro frentes de atuação, uma mesma missão.</h2>
+          <div class="traco"></div>
+          <p>Cada frente nasce de uma necessidade real do município e cresce com quem vive nele.</p>
+        </div>
+        <div class="areas-grid">
+          <div class="area-card reveal">
+            <span class="area-icone"><svg><use href="#i-mao" /></svg></span>
+            <h3>Assistência Social</h3>
+            <p>Projetos e benefícios socioassistenciais para jovens, adultos desempregados, mulheres e pessoas em
+              vulnerabilidade social, com cursos profissionalizantes e apoio à geração de renda.</p>
+          </div>
+          <div class="area-card reveal">
+            <span class="area-icone"><svg><use href="#i-broto" /></svg></span>
+            <h3>Agricultura Familiar</h3>
+            <p>Apoio técnico aos agricultores familiares, capacitação em máquinas agrícolas, construção de tanques de
+              peixe e participação em programas como PAA e PNAE.</p>
+          </div>
+          <div class="area-card reveal">
+            <span class="area-icone"><svg><use href="#i-livro" /></svg></span>
+            <h3>Cultura e Educação</h3>
+            <p>Eventos culturais, oficinas e atividades educacionais. Execução da Lei Paulo Gustavo e publicação de
+              materiais sobre a história e o patrimônio de Lagoa do Piauí.</p>
+          </div>
+          <div class="area-card reveal">
+            <span class="area-icone"><svg><use href="#i-camera" /></svg></span>
+            <h3>Produções Audiovisuais</h3>
+            <p>Apoio a artistas locais, bandas, espaços culturais comunitários e produções audiovisuais, fortalecendo
+              a economia criativa do município.</p>
+          </div>
+        </div>
       </div>
-      <div class="areas-grid">
-        <div class="area-card reveal">
-          <div class="area-icon">🤝</div>
-          <h3>Assistência Social</h3>
-          <p>Projetos e benefícios socioassistenciais voltados para jovens, adultos desempregados, mulheres e pessoas em
-            vulnerabilidade social. Incluem cursos profissionalizantes, apoio à geração de renda e inclusão social.</p>
-        </div>
-        <div class="area-card reveal">
-          <div class="area-icon">🌱</div>
-          <h3>Agricultura Familiar</h3>
-          <p>Apoio técnico operacional aos agricultores familiares, capacitação em operação e manutenção de máquinas
-            agrícolas, construção de tanques de peixe e participação em programas como PAA e PNAE.</p>
-        </div>
-        <div class="area-card reveal">
-          <div class="area-icon">📚</div>
-          <h3>Cultura e Educação</h3>
-          <p>Eventos culturais, oficinas temáticas e atividades educacionais para a comunidade. Execução da Lei Paulo
-            Gustavo e publicação de materiais sobre história e patrimônio cultural de Lagoa do Piauí.</p>
-        </div>
-        <div class="area-card reveal">
-          <div class="area-icon">🎨</div>
-          <h3>Produções Audiovisuais</h3>
-          <p>Apoio a artistas locais, bandas musicais, espaços culturais comunitários e produções audiovisuais,
-            fortalecendo a economia criativa e as manifestações culturais do município.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJETOS -->
-  <section id="projetos">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Histórico</span>
-        <h2 class="section-title">Projetos Executados</h2>
-        <div class="section-divider"></div>
-      </div>
-      <div class="projetos-grid">
+    <!-- PROJETOS -->
+    <section id="projetos" class="secao">
+      <div class="container">
+        <div class="cabecalho reveal">
+          <span class="eyebrow">Projetos</span>
+          <h2 class="titulo">Seis projetos. Muitas histórias transformadas.</h2>
+          <div class="traco"></div>
+          <p>Formação profissional, cultura e agricultura familiar: conheça o que já realizamos e o que está em
+            andamento.</p>
+        </div>
+        <div class="projetos-grid">
 
-        <div class="projeto-card reveal">
-          <div class="projeto-header">
-            <div class="projeto-num">01</div>
-            <div>
+          <article class="projeto-card reveal">
+            <div class="projeto-capa">
+              <img src="img/capacitar/turma-microtrator.jpg" alt="Turma do Capacitar e Produzir com o microtrator"
+                width="1600" height="1200" loading="lazy" />
+            </div>
+            <div class="projeto-corpo">
+              <span class="etiqueta etiqueta-destaque">Em andamento · 2026</span>
+              <h3>Capacitar e Produzir</h3>
+              <p>Qualificação de 30 adolescentes, jovens e adultos em operação e manutenção de máquinas agrícolas.
+                Termo de Colaboração nº 04/2026 com a SEIPS/SASC-PI.</p>
+              <a href="#capacitar" class="btn btn-azul btn-pequeno">Ver projeto <svg><use href="#i-seta" /></svg></a>
+            </div>
+          </article>
+
+          <article class="projeto-card reveal">
+            <div class="projeto-capa">
+              <img src="foto_curso1.jpg" alt="Aula prática de formação profissional rural" width="1008" height="756"
+                loading="lazy" />
+            </div>
+            <div class="projeto-corpo">
+              <span class="etiqueta">Agricultura · 2019 – 2023</span>
               <h3>Formação Profissional Rural – SENAR</h3>
-              <div class="ano">2019 – 2023</div>
+              <p>Parceria com o SENAR-PI em 6 cursos: Manutenção e Operação de Trator Agrícola, Manejo de Olerícolas,
+                Alimentação Alternativa e outros.</p>
             </div>
-          </div>
-          <div class="projeto-body">
-            <p>Parceria com o SENAR-PI para cursos de formação profissional rural: Manutenção e Operação de Trator
-              Agrícola, Manejo de Olerícolas, Alimentação Alternativa e mais. Capacitação direta de produtores rurais.
+          </article>
+
+          <article class="projeto-card reveal">
+            <div class="projeto-capa projeto-capa-cor">
+              <svg><use href="#i-broto" /></svg>
+            </div>
+            <div class="projeto-corpo">
+              <span class="etiqueta">Assistência Social · 2022</span>
+              <h3>Máquinas Agrícolas – SASC</h3>
+              <p>Termo de Colaboração nº 16/2022: 20 jovens formados e 10 tanques de peixe construídos ou reformados
+                para 10 famílias. Contas <strong>aprovadas</strong> em 30/10/2024.</p>
+            </div>
+          </article>
+
+          <article class="projeto-card reveal">
+            <div class="projeto-capa projeto-capa-cor projeto-capa-azul">
+              <svg><use href="#i-livro" /></svg>
+            </div>
+            <div class="projeto-corpo">
+              <span class="etiqueta">Cultura e Educação · 2024</span>
+              <h3>Lei Paulo Gustavo</h3>
+              <p>Oficinas de narrativa para o 2º e o 3º ano do Ensino Médio e lançamento do livro "Lagoa do Piauí:
+                Conhecendo a Pátria Querida".</p>
+            </div>
+          </article>
+
+          <article class="projeto-card reveal">
+            <div class="projeto-capa projeto-capa-cor projeto-capa-escura">
+              <svg><use href="#i-camera" /></svg>
+            </div>
+            <div class="projeto-corpo">
+              <span class="etiqueta">Cultura · 2020</span>
+              <h3>Lei Aldir Blanc</h3>
+              <p>Gestão de recursos para manutenção de espaços artísticos e culturais: 14 espaços comunitários do
+                município contemplados.</p>
+            </div>
+          </article>
+
+          <article class="projeto-card reveal">
+            <div class="projeto-capa projeto-capa-cor">
+              <svg><use href="#i-mao" /></svg>
+            </div>
+            <div class="projeto-corpo">
+              <span class="etiqueta">Evento · 2020</span>
+              <h3>Lagoa Live</h3>
+              <p>Evento de dezembro de 2020 com o Conselho Municipal de Cultura, reconhecendo trabalhadores culturais
+                do município — de YouTubers a vaqueiros aboiadores.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPACITAR E PRODUZIR -->
+    <section id="capacitar" class="secao secao-cinza">
+      <div class="container">
+        <div class="cabecalho reveal">
+          <span class="eyebrow">Projeto em andamento</span>
+          <h2 class="titulo">Capacitar e Produzir</h2>
+          <div class="traco"></div>
+        </div>
+
+        <div class="capacitar-intro">
+          <div class="capacitar-texto reveal">
+            <p class="capacitar-lead">
+              Inclusão produtiva de adolescentes, jovens e adultos em situação de vulnerabilidade social por meio da
+              qualificação em <strong>operação e manutenção de máquinas agrícolas</strong>.
             </p>
-            <div class="projeto-tags">
-              <span class="tag">SENAR-PI</span>
-              <span class="tag">Agricultura</span>
-              <span class="tag">6 Cursos</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="projeto-card reveal">
-          <div class="projeto-header">
-            <div class="projeto-num">02</div>
-            <div>
-              <h3>Operação e Manutenção de Máquinas Agrícolas – SASC</h3>
-              <div class="ano">2022</div>
-            </div>
-          </div>
-          <div class="projeto-body">
-            <p>Termo de Colaboração nº 16/2022: formação de 20 jovens em situação de vulnerabilidade ou da agricultura
-              familiar, com construção/reforma de 10 tanques de peixe para 10 famílias. Prestação de contas
-              <strong>aprovada</strong> em 30/10/2024.
+            <p>
+              Em municípios de pequeno porte como Lagoa do Piauí, a falta de formação técnica é uma das principais
+              barreiras de acesso ao trabalho e à renda. O projeto <strong>Capacitar e Produzir</strong> enfrenta essa
+              barreira unindo aulas em sala, prática supervisionada em campo com o maquinário da própria Fundação e
+              formação cidadã.
             </p>
-            <div class="projeto-tags">
-              <span class="tag">SASC</span>
-              <span class="tag">20 jovens</span>
-              <span class="tag">10 famílias</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="projeto-card reveal">
-          <div class="projeto-header">
-            <div class="projeto-num">03</div>
-            <div>
-              <h3>Lei Aldir Blanc – Subsídios Culturais</h3>
-              <div class="ano">2020</div>
-            </div>
-          </div>
-          <div class="projeto-body">
-            <p>Gestão de recursos da Lei Aldir Blanc para manutenção de espaços artísticos e culturais. Contemplou 14
-              espaços culturais comunitários do município com subsídio total.</p>
-            <div class="projeto-tags">
-              <span class="tag">Cultura</span>
-              <span class="tag">14 espaços</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="projeto-card reveal">
-          <div class="projeto-header">
-            <div class="projeto-num">04</div>
-            <div>
-              <h3>Lei Paulo Gustavo – Produções Culturais</h3>
-              <div class="ano">2024</div>
-            </div>
-          </div>
-          <div class="projeto-body">
-            <p>Execução da Lei Paulo Gustavo: oficinas sobre narrativa para alunos do 2º e 3º ano do Ensino Médio e
-              lançamento do livro "Lagoa do Piauí: Conhecendo a Pátria Querida" em parceria com a comunidade escolar.
+            <p>
+              Participam jovens de 19 a 30 anos e adultos de 30 a 50 anos de baixa renda, inscritos em programas
+              sociais oficiais, desempregados ou em requalificação profissional. Pessoas de grupos afirmativos e da
+              diversidade de gênero têm prioridade na seleção.
             </p>
-            <div class="projeto-tags">
-              <span class="tag">Cultura</span>
-              <span class="tag">Educação</span>
-              <span class="tag">Ensino Médio</span>
-            </div>
+          </div>
+
+          <aside class="inscricao-card reveal" data-ate="2026-11-08">
+            <span class="inscricao-badge">2ª Turma</span>
+            <h3>Inscrições Abertas</h3>
+            <dl>
+              <div>
+                <dt>Período</dt>
+                <dd>03 a 08 de novembro de 2026</dd>
+              </div>
+              <div>
+                <dt>Horário</dt>
+                <dd>8h às 11h</dd>
+              </div>
+              <div>
+                <dt>Local</dt>
+                <dd>Sala do Empreendedor de Lagoa do Piauí</dd>
+              </div>
+              <div>
+                <dt>Documentos</dt>
+                <dd>Comprovante de endereço, CPF e RG, NIS</dd>
+              </div>
+            </dl>
+            <p class="inscricao-aviso">Vagas limitadas!</p>
+          </aside>
+        </div>
+
+        <div class="capacitar-numeros reveal">
+          <div>
+            <strong>30</strong>
+            <span>participantes qualificados</span>
+          </div>
+          <div>
+            <strong>2</strong>
+            <span>turmas de formação</span>
+          </div>
+          <div>
+            <strong>24h</strong>
+            <span>de aulas teóricas por turma, além da prática em campo</span>
+          </div>
+          <div>
+            <strong>5</strong>
+            <span>equipamentos comunitários beneficiados</span>
           </div>
         </div>
 
-        <div class="projeto-card reveal">
-          <div class="projeto-header">
-            <div class="projeto-num">05</div>
-            <div>
-              <h3>Evento Cultural "Lagoa Live"</h3>
-              <div class="ano">2020</div>
-            </div>
+        <h3 class="subtitulo reveal">Da sala de aula ao campo, em quatro metas</h3>
+        <div class="metas-grid">
+          <div class="meta-card reveal">
+            <span class="meta-num">Meta I</span>
+            <h4>Seleção e materiais</h4>
+            <p>Seleção pública e busca ativa dos 30 participantes; compra de material didático, EPIs e insumos.</p>
           </div>
-          <div class="projeto-body">
-            <p>Organização e realização do evento Lagoa Live em dezembro de 2020, em parceria com o Conselho Municipal
-              de Cultura, reconhecendo trabalhadores culturais do município — de YouTubers a vaqueiros aboladores.</p>
-            <div class="projeto-tags">
-              <span class="tag">Evento</span>
-              <span class="tag">Cultura Local</span>
-              <span class="tag">Artistas Locais</span>
-            </div>
+          <div class="meta-card reveal">
+            <span class="meta-num">Meta II</span>
+            <h4>Formação teórica</h4>
+            <p>Cidadania e direitos sociais e trabalhistas (8h), operação (8h) e manutenção (8h) de máquinas agrícolas.
+            </p>
+          </div>
+          <div class="meta-card reveal">
+            <span class="meta-num">Meta III</span>
+            <h4>Prática em campo</h4>
+            <p>Aulas práticas de operação e manutenção com o trator, os implementos e o caminhão da Fundação.</p>
+          </div>
+          <div class="meta-card reveal">
+            <span class="meta-num">Meta IV</span>
+            <h4>Certificação</h4>
+            <p>Avaliação geral em roda de conversa com todos os envolvidos e entrega dos certificados.</p>
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- CAPACITAR E PRODUZIR -->
-  <section id="capacitar">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Projeto em Andamento</span>
-        <h2 class="section-title">Capacitar e Produzir</h2>
-        <div class="section-divider"></div>
-      </div>
-
-      <div class="capacitar-intro">
-        <div class="capacitar-texto reveal">
-          <p class="capacitar-lead">
-            Inclusão produtiva de adolescentes, jovens e adultos em situação de vulnerabilidade social por meio da
-            qualificação em <strong>operação e manutenção de máquinas agrícolas</strong>.
-          </p>
-          <p>
-            Em municípios de pequeno porte como Lagoa do Piauí, a falta de formação técnica é uma das principais
-            barreiras de acesso ao trabalho e à renda. O projeto <strong>Capacitar e Produzir</strong> enfrenta essa
-            barreira unindo aulas em sala, prática supervisionada em campo com o maquinário da própria Fundação e
-            formação cidadã.
-          </p>
-          <p>
-            Participam jovens de 19 a 30 anos e adultos de 30 a 50 anos de baixa renda, inscritos em programas
-            sociais oficiais, desempregados ou em requalificação profissional. Pessoas de grupos afirmativos e da
-            diversidade de gênero têm prioridade na seleção.
-          </p>
+        <h3 class="subtitulo reveal">Aprender fazendo, no campo</h3>
+        <div class="capacitar-midia">
+          <figure class="midia-item midia-destaque reveal" tabindex="0" role="button"
+            aria-label="Ampliar foto: turma e equipe técnica do projeto">
+            <img src="img/capacitar/turma-trator.jpg" alt="Participantes com fardamento azul e capacetes reunidos com a equipe técnica em frente ao trator New Holland da Fundação"
+              width="1600" height="1067" loading="lazy" decoding="async" />
+            <figcaption>Turma e equipe técnica do projeto</figcaption>
+          </figure>
+          <figure class="midia-item midia-alta reveal" tabindex="0" role="button"
+            aria-label="Ampliar foto: demonstração de operação do trator">
+            <img src="img/capacitar/aula-campo.jpg" alt="Turma de capacete acompanhando de perto a demonstração de operação do trator no campo"
+              width="1200" height="1600" loading="lazy" decoding="async" />
+            <figcaption>Demonstração de operação do trator</figcaption>
+          </figure>
+          <figure class="midia-item reveal" tabindex="0" role="button"
+            aria-label="Ampliar foto: aula de manutenção com o microtrator">
+            <img src="img/capacitar/turma-microtrator.jpg" alt="Turma reunida ao redor do microtrator na aula de manutenção na oficina da Fundação"
+              width="1600" height="1200" loading="lazy" decoding="async" />
+            <figcaption>Aula de manutenção com o microtrator</figcaption>
+          </figure>
+          <figure class="midia-item reveal" tabindex="0" role="button"
+            aria-label="Ampliar foto: participante em aula prática de operação do trator">
+            <img src="img/capacitar/aluno-trator.jpg" alt="Participante com capacete e protetor auricular operando o trator em aula prática"
+              width="1200" height="1600" loading="lazy" decoding="async" />
+            <figcaption>Aula prática de operação</figcaption>
+          </figure>
+          <figure class="midia-item reveal" tabindex="0" role="button" aria-label="Ampliar foto: área de treino em campo aberto">
+            <img src="img/capacitar/aula-pratica-campo.jpg" alt="Área de treino em campo aberto, com cone de sinalização e câmera registrando a turma ao redor do trator"
+              width="1599" height="899" loading="lazy" decoding="async" />
+            <figcaption>Área de treino em campo aberto</figcaption>
+          </figure>
         </div>
 
-        <aside class="inscricao-card reveal" data-ate="2026-11-08">
-          <span class="inscricao-badge">2ª Turma</span>
-          <h3>Inscrições Abertas</h3>
-          <dl>
-            <div>
-              <dt>Período</dt>
-              <dd>03 a 08 de novembro de 2026</dd>
-            </div>
-            <div>
-              <dt>Horário</dt>
-              <dd>8h às 11h</dd>
-            </div>
-            <div>
-              <dt>Local</dt>
-              <dd>Sala do Empreendedor de Lagoa do Piauí</dd>
-            </div>
-            <div>
-              <dt>Documentos</dt>
-              <dd>Comprovante de endereço, CPF e RG, NIS</dd>
-            </div>
-          </dl>
-          <p class="inscricao-aviso">⚠️ Vagas limitadas!</p>
-        </aside>
+        <div class="capacitar-rodape">
+          <div class="ficha-tecnica reveal">
+            <h4>Ficha Técnica</h4>
+            <dl>
+              <div><dt>Instrumento</dt><dd>Termo de Colaboração nº 04/2026</dd></div>
+              <div><dt>Parceria</dt><dd>SEIPS / SASC-PI · recursos FECOP</dd></div>
+              <div><dt>Vigência</dt><dd>14/08/2026 a 14/08/2027</dd></div>
+              <div><dt>Execução</dt><dd>01/11/2026 a 31/01/2027</dd></div>
+              <div><dt>Valor global</dt><dd>R$ 150.527,00</dd></div>
+              <div><dt>Abrangência</dt><dd>Lagoa do Piauí – PI</dd></div>
+            </dl>
+          </div>
+          <div class="capacitar-parceiros reveal">
+            <h4>Parceiros do Projeto</h4>
+            <ul>
+              <li><strong>SEIPS / SASC-PI</strong> Governo do Estado do Piauí</li>
+              <li><strong>SEBRAE</strong> Serviço Brasileiro de Apoio às Micro e Pequenas Empresas</li>
+              <li><strong>Prefeitura</strong> Prefeitura Municipal de Lagoa do Piauí</li>
+              <li><strong>STRML</strong> Sindicato dos Trabalhadores Rurais Agricultores e Agricultoras Familiares de
+                Lagoa do Piauí</li>
+              <li><strong>Sala do Empreendedor</strong> Lagoa do Piauí</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="capacitar-numeros reveal">
-        <div>
-          <strong>30</strong>
-          <span>participantes qualificados</span>
-        </div>
-        <div>
-          <strong>2</strong>
-          <span>turmas de formação</span>
-        </div>
-        <div>
-          <strong>24h</strong>
-          <span>de aulas teóricas por turma, além da prática em campo</span>
-        </div>
-        <div>
-          <strong>5</strong>
-          <span>equipamentos comunitários beneficiados</span>
-        </div>
-      </div>
-
-      <h3 class="capacitar-subtitulo reveal">Da sala de aula ao campo, em quatro metas</h3>
-      <div class="metas-grid">
-        <div class="meta-card reveal">
-          <span class="meta-num">Meta I</span>
-          <h4>Seleção e materiais</h4>
-          <p>Seleção pública e busca ativa dos 30 participantes; compra de material didático, EPIs e insumos.</p>
-        </div>
-        <div class="meta-card reveal">
-          <span class="meta-num">Meta II</span>
-          <h4>Formação teórica</h4>
-          <p>Cidadania e direitos sociais e trabalhistas (8h), operação (8h) e manutenção (8h) de máquinas agrícolas.</p>
-        </div>
-        <div class="meta-card reveal">
-          <span class="meta-num">Meta III</span>
-          <h4>Prática em campo</h4>
-          <p>Aulas práticas de operação e manutenção com o trator, os implementos e o caminhão da Fundação.</p>
-        </div>
-        <div class="meta-card reveal">
-          <span class="meta-num">Meta IV</span>
-          <h4>Certificação</h4>
-          <p>Avaliação geral em roda de conversa com todos os envolvidos e entrega dos certificados.</p>
-        </div>
-      </div>
-
-      <h3 class="capacitar-subtitulo reveal">Aprender fazendo, no campo</h3>
-      <div class="capacitar-midia">
-        <figure class="midia-item midia-destaque reveal" tabindex="0" role="button"
-          aria-label="Ampliar foto: turma e equipe técnica do projeto">
-          <img src="img/capacitar/turma-trator.jpg" alt="Participantes com fardamento azul e capacetes reunidos com a equipe técnica em frente ao trator New Holland da Fundação"
-            width="1600" height="1067" loading="lazy" decoding="async" />
-          <figcaption>Turma e equipe técnica do projeto</figcaption>
-        </figure>
-        <figure class="midia-item midia-alta reveal" tabindex="0" role="button"
-          aria-label="Ampliar foto: demonstração de operação do trator">
-          <img src="img/capacitar/aula-campo.jpg" alt="Turma de capacete acompanhando de perto a demonstração de operação do trator no campo"
-            width="1200" height="1600" loading="lazy" decoding="async" />
-          <figcaption>Demonstração de operação do trator</figcaption>
-        </figure>
-        <figure class="midia-item reveal" tabindex="0" role="button"
-          aria-label="Ampliar foto: aula de manutenção com o microtrator">
-          <img src="img/capacitar/turma-microtrator.jpg" alt="Turma reunida ao redor do microtrator na aula de manutenção na oficina da Fundação"
-            width="1600" height="1200" loading="lazy" decoding="async" />
-          <figcaption>Aula de manutenção com o microtrator</figcaption>
-        </figure>
-        <figure class="midia-item reveal" tabindex="0" role="button" aria-label="Ampliar foto: participante em aula prática de operação do trator">
-          <img src="img/capacitar/aluno-trator.jpg" alt="Participante com capacete e protetor auricular operando o trator em aula prática"
-            width="1200" height="1600" loading="lazy" decoding="async" />
-          <figcaption>Aula prática de operação</figcaption>
-        </figure>
-        <figure class="midia-item reveal" tabindex="0" role="button" aria-label="Ampliar foto: área de treino em campo aberto">
-          <img src="img/capacitar/aula-pratica-campo.jpg" alt="Área de treino em campo aberto, com cone de sinalização e câmera registrando a turma ao redor do trator"
-            width="1599" height="899" loading="lazy" decoding="async" />
-          <figcaption>Área de treino em campo aberto</figcaption>
-        </figure>
-      </div>
-
-      <div class="capacitar-rodape">
-        <div class="ficha-tecnica reveal">
-          <h4>Ficha Técnica</h4>
-          <dl>
-            <div><dt>Instrumento</dt><dd>Termo de Colaboração nº 04/2026</dd></div>
-            <div><dt>Parceria</dt><dd>SEIPS / SASC-PI · recursos FECOP</dd></div>
-            <div><dt>Vigência</dt><dd>14/08/2026 a 14/08/2027</dd></div>
-            <div><dt>Execução</dt><dd>01/11/2026 a 31/01/2027</dd></div>
-            <div><dt>Valor global</dt><dd>R$ 150.527,00</dd></div>
-            <div><dt>Abrangência</dt><dd>Lagoa do Piauí – PI</dd></div>
-          </dl>
-        </div>
-        <div class="capacitar-parceiros reveal">
-          <h4>Parceiros do Projeto</h4>
-          <ul>
-            <li><strong>SEIPS / SASC-PI</strong> Governo do Estado do Piauí</li>
-            <li><strong>SEBRAE</strong> Serviço Brasileiro de Apoio às Micro e Pequenas Empresas</li>
-            <li><strong>Prefeitura</strong> Prefeitura Municipal de Lagoa do Piauí</li>
-            <li><strong>STRML</strong> Sindicato dos Trabalhadores Rurais Agricultores e Agricultoras Familiares de Lagoa do Piauí</li>
-            <li><strong>Sala do Empreendedor</strong> Lagoa do Piauí</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICAÇÕES -->
-  <section id="certificacoes">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Regularidade</span>
-        <h2 class="section-title">Certificações e Títulos</h2>
-        <div class="section-divider"></div>
-      </div>
-      <div class="cert-grid">
-        <div class="cert-card reveal">
-          <div class="cert-orgao">Municipal</div>
-          <h3>Utilidade Pública Municipal</h3>
-          <span class="cert-validade">Lei nº 121/2021 de 11/06/2021</span>
-        </div>
-        <div class="cert-card reveal">
-          <div class="cert-orgao">Estadual</div>
-          <h3>Utilidade Pública Estadual</h3>
-          <span class="cert-validade">Leis nº 7.820 e 7.821 de 24/06/2022</span>
-        </div>
-        <div class="cert-card reveal">
-          <div class="cert-orgao">SASC – Assistência Social</div>
-          <h3>Credenciamento SASC</h3>
-          <span class="cert-validade">Válido até 11/04/2027</span>
-        </div>
-        <div class="cert-card reveal">
-          <div class="cert-orgao">SECULT – Cultura</div>
-          <h3>Carteira de Habilitação nº 11308/2024</h3>
-          <span class="cert-validade">Válida até 22/10/2028</span>
-        </div>
-        <div class="cert-card reveal">
-          <div class="cert-orgao">SAF – Agricultura Familiar</div>
-          <h3>Credenciamento PAS – Edital 002/2024</h3>
-          <span class="cert-validade">Credenciada ativa</span>
-        </div>
-        <div class="cert-card reveal">
-          <div class="cert-orgao">Governo Federal</div>
-          <h3>Habilitação Transferegov</h3>
-          <span class="cert-validade">Regularidade ativa – 16/07/2025</span>
-        </div>
-        <div class="cert-card reveal">
-          <div class="cert-orgao">CMAS</div>
-          <h3>Inscrição no Conselho Municipal de Assistência Social</h3>
-          <span class="cert-validade">Inscrição nº 01/2025</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALERIA -->
-  <section id="galeria">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Registros</span>
-        <h2 class="section-title">Galeria de Fotos</h2>
-        <div class="section-divider"></div>
-      </div>
+    <!-- GALERIA -->
+    <section id="galeria" class="galeria" aria-label="Galeria de fotos">
       <div class="galeria-grid">
-        <figure class="galeria-item reveal" tabindex="0" role="button" aria-label="Ampliar foto: Divulgação do curso de formação profissional">
-          <img src="foto1.jpg" alt="Divulgação do curso de formação profissional" width="1600" height="1200" decoding="async" />
-          <div class="galeria-placeholder" style="display:none">📷<span>Foto indisponível</span></div>
-          <figcaption class="galeria-overlay"><span>Curso de Formação Profissional</span></figcaption>
+        <figure class="galeria-item" tabindex="0" role="button" aria-label="Ampliar foto: curso de formação profissional">
+          <img src="foto1.jpg" alt="Participantes de curso de formação profissional" width="1600" height="1200"
+            loading="lazy" decoding="async" />
+          <figcaption>Curso de Formação Profissional</figcaption>
         </figure>
-        <figure class="galeria-item reveal" tabindex="0" role="button" aria-label="Ampliar foto: Material de divulgação do curso de formação profissional">
-          <img src="foto2.jpeg" alt="Material de divulgação do curso de formação profissional" width="1000" height="461" loading="lazy" decoding="async" />
-          <div class="galeria-placeholder" style="display:none">📷<span>Foto indisponível</span></div>
-          <figcaption class="galeria-overlay"><span>Curso de Formação Profissional</span></figcaption>
+        <figure class="galeria-item" tabindex="0" role="button" aria-label="Ampliar foto: aula prática de formação profissional">
+          <img src="foto_curso1.jpg" alt="Aula prática do curso de formação profissional" width="1008" height="756"
+            loading="lazy" decoding="async" />
+          <figcaption>Aula prática</figcaption>
         </figure>
-        <figure class="galeria-item reveal" tabindex="0" role="button" aria-label="Ampliar foto: Registro de atividade do curso de formação profissional">
-          <img src="foto3.jpg" alt="Registro de atividade do curso de formação profissional" width="1600" height="1200" loading="lazy" decoding="async" />
-          <div class="galeria-placeholder" style="display:none">📷<span>Foto indisponível</span></div>
-          <figcaption class="galeria-overlay"><span>Curso de Formação Profissional</span></figcaption>
+        <figure class="galeria-item" tabindex="0" role="button" aria-label="Ampliar foto: aula de manutenção com o microtrator">
+          <img src="img/capacitar/turma-microtrator.jpg" alt="Turma reunida ao redor do microtrator" width="1600"
+            height="1200" loading="lazy" decoding="async" />
+          <figcaption>Capacitar e Produzir</figcaption>
         </figure>
-        <figure class="galeria-item reveal" tabindex="0" role="button" aria-label="Ampliar foto: Aula prática do curso de formação profissional">
-          <img src="foto_curso1.jpg" alt="Aula prática do curso de formação profissional" width="1008" height="756" loading="lazy" decoding="async" />
-          <div class="galeria-placeholder" style="display:none">📷<span>Foto indisponível</span></div>
-          <figcaption class="galeria-overlay"><span>Curso de Formação Profissional</span></figcaption>
+        <figure class="galeria-item" tabindex="0" role="button" aria-label="Ampliar foto: registro de atividade de formação">
+          <img src="foto3.jpg" alt="Registro de atividade do curso de formação profissional" width="1600" height="1200"
+            loading="lazy" decoding="async" />
+          <figcaption>Formação profissional</figcaption>
         </figure>
-        <figure class="galeria-item reveal" tabindex="0" role="button" aria-label="Ampliar foto: Participantes da formação profissional reunidos">
-          <img src="foto_curso2.jpg" alt="Participantes da formação profissional reunidos" width="1288" height="952" loading="lazy" decoding="async" />
-          <div class="galeria-placeholder" style="display:none">📷<span>Foto indisponível</span></div>
-          <figcaption class="galeria-overlay"><span>Participantes da Formação Profissional</span></figcaption>
+        <figure class="galeria-item" tabindex="0" role="button" aria-label="Ampliar foto: participantes da formação reunidos">
+          <img src="foto_curso2.jpg" alt="Participantes da formação profissional reunidos" width="1288" height="952"
+            loading="lazy" decoding="async" />
+          <figcaption>Participantes da formação</figcaption>
+        </figure>
+        <figure class="galeria-item" tabindex="0" role="button" aria-label="Ampliar foto: área de treino em campo aberto">
+          <img src="img/capacitar/aula-pratica-campo.jpg" alt="Turma em treino com trator em campo aberto" width="1599"
+            height="899" loading="lazy" decoding="async" />
+          <figcaption>Treino em campo aberto</figcaption>
         </figure>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
-    <button class="lightbox-close" type="button" aria-label="Fechar foto">&times;</button>
-    <img src="" alt="" id="lightboxImg" />
-    <p id="lightboxCaption"></p>
-  </dialog>
-
-  <!-- TRANSPARÊNCIA -->
-  <section id="transparencia">
-    <div class="container">
-      <div class="transp-inner">
-        <div class="transp-text reveal">
-          <span class="section-tag">Prestação de Contas</span>
-          <h2 class="section-title">Transparência e Regularidade</h2>
-          <div class="section-divider"></div>
-          <p>Mantemos rigoroso compromisso com a transparência e a boa gestão dos recursos públicos e privados. Todas as
-            nossas prestações de contas são realizadas tempestivamente e aprovadas pelos órgãos competentes.</p>
+    <!-- CERTIFICAÇÕES -->
+    <section id="certificacoes" class="secao">
+      <div class="container">
+        <div class="cabecalho reveal">
+          <span class="eyebrow">Regularidade</span>
+          <h2 class="titulo">Reconhecida pelo poder público. Enraizada em Lagoa do Piauí.</h2>
+          <div class="traco"></div>
+          <p>Títulos, credenciamentos e habilitações que comprovam a regularidade da Fundação.</p>
         </div>
-        <div class="transp-items reveal">
+        <div class="cert-grid">
+          <div class="cert-card reveal">
+            <span class="cert-orgao">Municipal</span>
+            <h3>Utilidade Pública Municipal</h3>
+            <span class="cert-validade"><svg><use href="#i-check" /></svg>Lei nº 121/2021 de 11/06/2021</span>
+          </div>
+          <div class="cert-card reveal">
+            <span class="cert-orgao">Estadual</span>
+            <h3>Utilidade Pública Estadual</h3>
+            <span class="cert-validade"><svg><use href="#i-check" /></svg>Leis nº 7.820 e 7.821 de 24/06/2022</span>
+          </div>
+          <div class="cert-card reveal">
+            <span class="cert-orgao">SASC – Assistência Social</span>
+            <h3>Credenciamento SASC</h3>
+            <span class="cert-validade"><svg><use href="#i-check" /></svg>Válido até 11/04/2027</span>
+          </div>
+          <div class="cert-card reveal">
+            <span class="cert-orgao">SECULT – Cultura</span>
+            <h3>Carteira de Habilitação nº 11308/2024</h3>
+            <span class="cert-validade"><svg><use href="#i-check" /></svg>Válida até 22/10/2028</span>
+          </div>
+          <div class="cert-card reveal">
+            <span class="cert-orgao">SAF – Agricultura Familiar</span>
+            <h3>Credenciamento PAS – Edital 002/2024</h3>
+            <span class="cert-validade"><svg><use href="#i-check" /></svg>Credenciada ativa</span>
+          </div>
+          <div class="cert-card reveal">
+            <span class="cert-orgao">Governo Federal</span>
+            <h3>Habilitação Transferegov</h3>
+            <span class="cert-validade"><svg><use href="#i-check" /></svg>Regularidade ativa – 16/07/2025</span>
+          </div>
+          <div class="cert-card reveal">
+            <span class="cert-orgao">CMAS</span>
+            <h3>Inscrição no Conselho Municipal de Assistência Social</h3>
+            <span class="cert-validade"><svg><use href="#i-check" /></svg>Inscrição nº 01/2025</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSPARÊNCIA -->
+    <section id="transparencia" class="secao transparencia">
+      <div class="container transp-inner">
+        <div class="transp-texto reveal">
+          <span class="eyebrow">Prestação de contas</span>
+          <h2 class="titulo">Transparência e regularidade</h2>
+          <div class="traco"></div>
+          <p>Mantemos rigoroso compromisso com a transparência e a boa gestão dos recursos públicos e privados. Todas
+            as nossas prestações de contas são realizadas tempestivamente e aprovadas pelos órgãos competentes.</p>
+        </div>
+        <div class="transp-itens reveal">
           <div class="transp-item">
-            <div class="transp-check">✓</div>
+            <span class="transp-check"><svg><use href="#i-check" /></svg></span>
             <div>
               <h4>Termo de Colaboração 16/2022 (SASC)</h4>
               <p>Prestação de contas <strong>aprovada</strong> em 30/10/2024</p>
             </div>
           </div>
           <div class="transp-item">
-            <div class="transp-check">✓</div>
+            <span class="transp-check"><svg><use href="#i-check" /></svg></span>
             <div>
               <h4>Contas Regulares SASC e FECOP</h4>
               <p>Declaração de regularidade emitida em 2022</p>
             </div>
           </div>
           <div class="transp-item">
-            <div class="transp-check">✓</div>
+            <span class="transp-check"><svg><use href="#i-check" /></svg></span>
             <div>
               <h4>Transferegov – Plataforma Federal</h4>
               <p>Sem irregularidades cadastradas (consulta 16/07/2025)</p>
             </div>
           </div>
           <div class="transp-item">
-            <div class="transp-check">✓</div>
+            <span class="transp-check"><svg><use href="#i-check" /></svg></span>
             <div>
               <h4>Demais Plataformas Governamentais</h4>
               <p>Ausência de irregularidades em todos os sistemas</p>
@@ -582,99 +639,80 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PARCEIROS -->
-  <section id="parceiros">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Rede de Apoio</span>
-        <h2 class="section-title">Parceiros Institucionais</h2>
-        <div class="section-divider"></div>
-      </div>
-      <div class="parceiros-grid">
-        <div class="parceiro-card reveal">
-          <div class="parceiro-icon">🏛️</div>
-          <h4>Prefeitura Municipal de Lagoa do Piauí</h4>
-          <p>Parceria municipal</p>
+    <!-- PARCEIROS -->
+    <section id="parceiros" class="secao">
+      <div class="container">
+        <div class="cabecalho reveal">
+          <span class="eyebrow">Parceiros</span>
+          <h2 class="titulo">Parceiros que acreditam na força de Lagoa do Piauí</h2>
+          <div class="traco"></div>
+          <p>Órgãos públicos, conselhos e instituições que fazem parte dessa transformação. Juntos, chegamos mais
+            longe.</p>
         </div>
-        <div class="parceiro-card reveal">
-          <div class="parceiro-icon">🤲</div>
-          <h4>SASC</h4>
-          <p>Secretaria de Assistência Social e Cidadania</p>
-        </div>
-        <div class="parceiro-card reveal">
-          <div class="parceiro-icon">🎭</div>
-          <h4>SECULT</h4>
-          <p>Secretaria de Estado da Cultura</p>
-        </div>
-        <div class="parceiro-card reveal">
-          <div class="parceiro-icon">🌾</div>
-          <h4>SAF</h4>
-          <p>Secretaria da Agricultura Familiar</p>
-        </div>
-        <div class="parceiro-card reveal">
-          <div class="parceiro-icon">📖</div>
-          <h4>SENAR-PI</h4>
-          <p>Serviço Nacional de Aprendizagem Rural</p>
-        </div>
-        <div class="parceiro-card reveal">
-          <div class="parceiro-icon">💰</div>
-          <h4>FECOP</h4>
-          <p>Fundo Estadual de Combate à Pobreza</p>
-        </div>
-        <div class="parceiro-card reveal">
-          <div class="parceiro-icon">👥</div>
-          <h4>CMAS</h4>
-          <p>Conselho Municipal de Assistência Social</p>
-        </div>
-        <div class="parceiro-card reveal">
-          <div class="parceiro-icon">🏫</div>
-          <h4>Conselhos Municipais</h4>
-          <p>Cultura, Educação e demais conselhos</p>
+        <div class="parceiros-grid">
+          <div class="parceiro-card reveal">
+            <h4>Prefeitura Municipal</h4>
+            <p>Lagoa do Piauí</p>
+          </div>
+          <div class="parceiro-card reveal">
+            <h4>SASC</h4>
+            <p>Secretaria de Assistência Social e Cidadania</p>
+          </div>
+          <div class="parceiro-card reveal">
+            <h4>SECULT</h4>
+            <p>Secretaria de Estado da Cultura</p>
+          </div>
+          <div class="parceiro-card reveal">
+            <h4>SAF</h4>
+            <p>Secretaria da Agricultura Familiar</p>
+          </div>
+          <div class="parceiro-card reveal">
+            <h4>SENAR-PI</h4>
+            <p>Serviço Nacional de Aprendizagem Rural</p>
+          </div>
+          <div class="parceiro-card reveal">
+            <h4>FECOP</h4>
+            <p>Fundo Estadual de Combate à Pobreza</p>
+          </div>
+          <div class="parceiro-card reveal">
+            <h4>CMAS</h4>
+            <p>Conselho Municipal de Assistência Social</p>
+          </div>
+          <div class="parceiro-card reveal">
+            <h4>Conselhos Municipais</h4>
+            <p>Cultura, Educação e demais conselhos</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTATO -->
-  <section id="contato">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Fale Conosco</span>
-        <h2 class="section-title">Contato</h2>
-        <div class="section-divider"></div>
-      </div>
-      <div class="contato-grid">
+    <!-- CONTATO -->
+    <section id="contato" class="secao secao-cinza">
+      <div class="container contato-grid">
         <div class="contato-info reveal">
-          <h3>Informações de Contato</h3>
+          <span class="eyebrow">Fale conosco</span>
+          <h2 class="titulo">Vamos construir juntos?</h2>
+          <div class="traco"></div>
+          <p>Quer ser parceiro, saber mais sobre um projeto ou participar das nossas ações? Escreva para a gente.</p>
+          <a class="contato-item" href="mailto:associacaofundacaofteixeira@gmail.com">
+            <span class="contato-icone"><svg><use href="#i-email" /></svg></span>
+            <span><strong>E-mail</strong>associacaofundacaofteixeira@gmail.com</span>
+          </a>
           <div class="contato-item">
-            <div class="contato-icon" aria-hidden="true">📍</div>
-            <div>
-              <h4>Endereço</h4>
-              <p>Rua Joana Maria Alencar, nº 93<br>Bairro Modelo<br>Lagoa do Piauí – PI · CEP
-                64.388-000</p>
-            </div>
+            <span class="contato-icone"><svg><use href="#i-pin" /></svg></span>
+            <span><strong>Endereço</strong>Rua Joana Maria Alencar, nº 93, Bairro Modelo<br>Lagoa do Piauí – PI · CEP
+              64.388-000</span>
           </div>
           <div class="contato-item">
-            <div class="contato-icon" aria-hidden="true">✉️</div>
-            <div>
-              <h4>E-mail</h4>
-              <p><a href="mailto:associacaofundacaofteixeira@gmail.com">associacaofundacaofteixeira@gmail.com</a></p>
-            </div>
-          </div>
-          <div class="contato-item">
-            <div class="contato-icon" aria-hidden="true">🪪</div>
-            <div>
-              <h4>CNPJ</h4>
-              <p>28.295.504/0001-03</p>
-            </div>
+            <span class="contato-icone"><svg><use href="#i-doc" /></svg></span>
+            <span><strong>CNPJ</strong>28.295.504/0001-03</span>
           </div>
         </div>
 
         <form class="contato-form reveal" id="contatoForm" novalidate>
-          <h3>Envie uma Mensagem</h3>
+          <h3>Envie uma mensagem</h3>
           <div class="form-row">
             <div class="form-group">
               <label for="nome">Nome</label>
@@ -705,56 +743,70 @@
             <label for="mensagem">Mensagem</label>
             <textarea id="mensagem" name="mensagem" placeholder="Descreva como podemos ajudar..." required></textarea>
           </div>
-          <button class="btn-enviar" type="submit">Enviar Mensagem</button>
+          <button class="btn btn-azul btn-bloco" type="submit">Enviar mensagem <svg><use href="#i-seta" /></svg></button>
         </form>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img class="footer-logo" src="img/logo-completo.png" alt="Fundação Associação Filiço Teixeira" width="800" height="431"
-            loading="lazy" decoding="async" />
-          <p>Associação dos Amigos de Lagoa do Piauí — entidade sem fins lucrativos comprometida com o desenvolvimento
-            social, educacional e cultural da comunidade.</p>
-          <p class="cnpj">CNPJ: 28.295.504/0001-03</p>
-        </div>
-        <div class="footer-col">
-          <h4>Navegação</h4>
-          <ul>
-            <li><a href="#sobre">Sobre a Entidade</a></li>
-            <li><a href="#areas">Áreas de Atuação</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#capacitar">Capacitar e Produzir</a></li>
-            <li><a href="#certificacoes">Certificações</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#transparencia">Transparência</a></li>
-            <li><a href="#parceiros">Parceiros</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Atuação</h4>
-          <ul>
-            <li><a href="#areas">Assistência Social</a></li>
-            <li><a href="#areas">Agricultura Familiar</a></li>
-            <li><a href="#areas">Cultura e Educação</a></li>
-            <li><a href="#areas">Produções Audiovisuais</a></li>
-          </ul>
+  <dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+    <button class="lightbox-close" type="button" aria-label="Fechar foto">&times;</button>
+    <img src="" alt="" id="lightboxImg" />
+    <p id="lightboxCaption"></p>
+  </dialog>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="container rodape-grid">
+      <div class="rodape-marca">
+        <img class="rodape-logo" src="img/logo-completo.png" alt="Fundação Associação Filiço Teixeira" width="800"
+          height="431" loading="lazy" decoding="async" />
+        <p>Fundação Associação dos Amigos de Lagoa do Piauí, organização social sem fins lucrativos. CNPJ:
+          28.295.504/0001-03.</p>
+        <p>Desde 2017 transformando vidas em Lagoa do Piauí.</p>
+        <a class="rodape-social" href="https://www.instagram.com/fundacaoafteixeira/" target="_blank" rel="noopener"
+          aria-label="Instagram @fundacaoafteixeira"><svg><use href="#i-instagram" /></svg></a>
+      </div>
+      <div class="rodape-col">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Quem Somos</a></li>
+          <li><a href="#areas">Atuação</a></li>
+          <li><a href="#certificacoes">Certificações</a></li>
+          <li><a href="#transparencia">Transparência</a></li>
+          <li><a href="#parceiros">Parceiros</a></li>
+        </ul>
+      </div>
+      <div class="rodape-col">
+        <h4>Projetos</h4>
+        <ul>
+          <li><a href="#capacitar">Capacitar e Produzir</a></li>
+          <li><a href="#projetos">Formação Rural – SENAR</a></li>
+          <li><a href="#projetos">Máquinas Agrícolas – SASC</a></li>
+          <li><a href="#projetos">Lei Paulo Gustavo</a></li>
+          <li><a href="#projetos">Lei Aldir Blanc</a></li>
+        </ul>
+      </div>
+      <div class="rodape-col">
+        <h4>Contato</h4>
+        <a class="rodape-contato" href="mailto:associacaofundacaofteixeira@gmail.com">
+          <span class="contato-icone"><svg><use href="#i-email" /></svg></span>
+          <span><strong>E-mail</strong>associacaofundacaofteixeira@gmail.com</span>
+        </a>
+        <div class="rodape-contato">
+          <span class="contato-icone"><svg><use href="#i-pin" /></svg></span>
+          <span><strong>Local</strong>Rua Joana Maria Alencar, nº 93, Bairro Modelo · Lagoa do Piauí – PI</span>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>© <span id="ano">2026</span> Fundação Associação dos Amigos de Lagoa do Piauí – Fundação Filiço Teixeira. Todos os direitos
-          reservados.</span>
-        <span>Lagoa do Piauí – PI</span>
+    </div>
+    <div class="rodape-base">
+      <div class="container">
+        © <span id="ano">2026</span> Fundação Associação Filiço Teixeira | Todos os direitos reservados.
       </div>
     </div>
   </footer>
 
-  <!-- TOAST -->
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="js/main.js"></script>
