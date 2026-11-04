@@ -95,10 +95,4 @@ document.querySelectorAll('[data-ate]').forEach(el => {
   if (new Date() > new Date(el.dataset.ate + 'T23:59:59')) el.hidden = true;
 });
 
-// ===== VÍDEOS =====
-// Quem pediu menos movimento no sistema não recebe vídeo tocando sozinho
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  document.querySelectorAll('video[autoplay]').forEach(v => {v.pause(); v.controls = true;});
-}
-
 document.getElementById('ano').textContent = new Date().getFullYear();
