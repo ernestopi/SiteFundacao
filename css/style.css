@@ -503,6 +503,294 @@ section {
   border-radius: 20px;
 }
 
+/* ===== CAPACITAR E PRODUZIR ===== */
+#capacitar {
+  background: var(--creme);
+}
+
+.capacitar-intro {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+/* Depois do fim das inscrições o card some e o texto ocupa a largura toda */
+.capacitar-intro:has(.inscricao-card[hidden]) {
+  grid-template-columns: 1fr;
+}
+
+.capacitar-texto p {
+  color: var(--cinza);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+}
+
+.capacitar-texto .capacitar-lead {
+  font-size: 1.2rem;
+  color: var(--verde-escuro);
+  line-height: 1.6;
+}
+
+.capacitar-texto p strong {
+  color: var(--verde-escuro);
+}
+
+.inscricao-card {
+  background: var(--verde-escuro);
+  color: var(--branco);
+  border-radius: 12px;
+  padding: 2rem;
+  border-top: 4px solid var(--dourado);
+}
+
+.inscricao-badge {
+  display: inline-block;
+  background: var(--dourado);
+  color: var(--verde-escuro);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 2px;
+}
+
+.inscricao-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--dourado);
+  margin: 0.75rem 0 1.25rem;
+}
+
+.inscricao-card dl div {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.inscricao-card dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.inscricao-card dd {
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+.inscricao-aviso {
+  margin-top: 1.25rem;
+  font-weight: 700;
+  color: var(--dourado-claro);
+}
+
+.capacitar-numeros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--verde-escuro);
+  border-radius: 12px;
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+}
+
+.capacitar-numeros div {
+  padding: 1.75rem 1.5rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.capacitar-numeros div:last-child {
+  border-right: none;
+}
+
+.capacitar-numeros strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: var(--dourado);
+  line-height: 1;
+}
+
+.capacitar-numeros span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.45;
+}
+
+.capacitar-subtitulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--verde-escuro);
+  margin-bottom: 1.5rem;
+}
+
+.metas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.meta-card {
+  background: var(--branco);
+  border-radius: 10px;
+  padding: 1.5rem;
+  border-top: 3px solid var(--verde);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.meta-num {
+  display: inline-block;
+  background: var(--verde-escuro);
+  color: var(--dourado);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 3px;
+}
+
+.meta-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--verde-escuro);
+  margin: 0.75rem 0 0.5rem;
+}
+
+.meta-card p {
+  font-size: 0.9rem;
+  color: var(--cinza);
+  line-height: 1.65;
+}
+
+.capacitar-rodape {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.ficha-tecnica,
+.capacitar-parceiros {
+  background: var(--branco);
+  border-radius: 10px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.ficha-tecnica h4,
+.capacitar-parceiros h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--verde);
+  margin-bottom: 1rem;
+}
+
+.ficha-tecnica dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--creme-escuro);
+  font-size: 0.92rem;
+}
+
+.ficha-tecnica dl div:last-child,
+.capacitar-parceiros li:last-child {
+  border-bottom: none;
+}
+
+.ficha-tecnica dt {
+  color: var(--cinza);
+}
+
+.ficha-tecnica dd {
+  font-weight: 600;
+  color: var(--verde-escuro);
+  text-align: right;
+}
+
+.capacitar-parceiros ul {
+  list-style: none;
+}
+
+.capacitar-parceiros li {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--creme-escuro);
+  font-size: 0.85rem;
+  color: var(--cinza);
+}
+
+.capacitar-parceiros li strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--verde-escuro);
+}
+
+.capacitar-midia {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 230px;
+  gap: 1rem;
+}
+
+.midia-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--verde-escuro);
+}
+
+.midia-item[role="button"] {
+  cursor: pointer;
+}
+
+.midia-destaque {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.midia-alta {
+  grid-row: span 2;
+}
+
+.midia-item img,
+.midia-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.midia-item:hover img {
+  transform: scale(1.05);
+}
+
+.midia-item figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem 1rem 0.8rem;
+  background: linear-gradient(to top, rgba(27, 67, 50, 0.9), transparent);
+  color: var(--branco);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+[hidden] {
+  display: none !important;
+}
+
 /* ===== CERTIFICAÇÕES ===== */
 #certificacoes {
   background: var(--creme);
@@ -1130,6 +1418,8 @@ footer {
     display: flex;
   }
 
+  .capacitar-intro,
+  .capacitar-rodape,
   .contato-grid,
   .transp-inner {
     grid-template-columns: 1fr;
@@ -1151,6 +1441,27 @@ footer {
 
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .capacitar-midia {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 170px;
+  }
+
+  .capacitar-midia .midia-item:last-child {
+    grid-column: span 2;
+  }
+
+  .capacitar-numeros {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .capacitar-numeros div:nth-child(2) {
+    border-right: none;
+  }
+
+  .capacitar-numeros div:nth-child(-n+2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   section {

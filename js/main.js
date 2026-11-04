@@ -54,7 +54,7 @@ function abrirFoto(item) {
   lightboxCaption.textContent = item.querySelector('figcaption').textContent;
   lightbox.showModal();
 }
-document.querySelectorAll('.galeria-item').forEach(item => {
+document.querySelectorAll('.galeria-item, .midia-item[role="button"]').forEach(item => {
   item.addEventListener('click', () => abrirFoto(item));
   item.addEventListener('keydown', e => {
     if (e.key === 'Enter' || e.key === ' ') {e.preventDefault(); abrirFoto(item);}
@@ -88,5 +88,17 @@ document.getElementById('contatoForm').addEventListener('submit', e => {
   window.location.href = `mailto:${EMAIL_CONTATO}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
   mostrarToast(`✉️ Abrindo seu aplicativo de e-mail… Se não abrir, escreva para ${EMAIL_CONTATO}`);
 });
+
+// ===== AVISOS COM DATA DE VALIDADE =====
+// Elementos com data-ate="AAAA-MM-DD" somem sozinhos depois dessa data
+document.querySelectorAll('[data-ate]').forEach(el => {
+  if (new Date() > new Date(el.dataset.ate + 'T23:59:59')) el.hidden = true;
+});
+
+// ===== VÍDEOS =====
+// Quem pediu menos movimento no sistema não recebe vídeo tocando sozinho
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('video[autoplay]').forEach(v => {v.pause(); v.controls = true;});
+}
 
 document.getElementById('ano').textContent = new Date().getFullYear();
