@@ -1,7 +1,7 @@
 # Site da Fundação Filiço Teixeira
 
 Site institucional da **Fundação Associação dos Amigos de Lagoa do Piauí – Fundação Filiço Teixeira**,
-entidade sem fins lucrativos de Lagoa do Piauí – PI (CNPJ 28.295.504/0001-03).
+entidade sem fins lucrativos de Lagoa do Piauí – PI.
 
 É um site estático de uma página só: HTML, CSS e JavaScript puros, sem build e sem dependências.
 
