@@ -95,7 +95,8 @@ nav {
   transition: color 0.2s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--dourado);
 }
 
@@ -104,6 +105,14 @@ nav {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--dourado);
+  outline-offset: 3px;
 }
 
 .hamburger span {
@@ -150,14 +159,6 @@ nav {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
-}
-
-.hero-logo {
-  width: 110px;
-  height: auto;
-  margin-bottom: 1.2rem;
-  display: block;
-  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.3));
 }
 
 .hero-text {
@@ -335,11 +336,9 @@ section {
   background: var(--creme);
 }
 
-.sobre-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
-  align-items: start;
+.sobre-text {
+  max-width: 820px;
+  margin: 0 auto;
 }
 
 .sobre-text p {
@@ -351,46 +350,6 @@ section {
 
 .sobre-text p strong {
   color: var(--verde-escuro);
-}
-
-.sobre-info {
-  background: var(--verde-escuro);
-  border-radius: 10px;
-  padding: 2rem;
-  color: var(--branco);
-}
-
-.sobre-info h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  color: var(--dourado);
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.info-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.6rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.9rem;
-}
-
-.info-row:last-child {
-  border-bottom: none;
-}
-
-.info-label {
-  color: rgba(255, 255, 255, 0.55);
-  font-weight: 300;
-}
-
-.info-val {
-  color: var(--branco);
-  font-weight: 600;
-  text-align: right;
-  max-width: 60%;
 }
 
 /* ===== AREAS ===== */
@@ -544,11 +503,6 @@ section {
   border-radius: 20px;
 }
 
-.tag-value {
-  background: rgba(212, 168, 67, 0.15);
-  color: #8a6a00;
-}
-
 /* ===== CERTIFICAÇÕES ===== */
 #certificacoes {
   background: var(--creme);
@@ -660,8 +614,55 @@ section {
   padding: 1rem;
 }
 
-.galeria-item:hover .galeria-overlay {
+.galeria-item:hover .galeria-overlay,
+.galeria-item:focus-visible .galeria-overlay {
   opacity: 1;
+}
+
+/* Telas de toque não têm hover: legenda sempre visível */
+@media (hover: none) {
+  .galeria-overlay {
+    opacity: 1;
+  }
+}
+
+.lightbox {
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-width: 92vw;
+  max-height: 90vh;
+  margin: auto;
+}
+
+.lightbox::backdrop {
+  background: rgba(10, 30, 20, 0.92);
+}
+
+.lightbox img {
+  display: block;
+  max-width: 92vw;
+  max-height: 82vh;
+  border-radius: 6px;
+}
+
+.lightbox p {
+  color: var(--branco);
+  text-align: center;
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  color: var(--branco);
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .galeria-overlay span {
@@ -858,6 +859,11 @@ section {
   font-size: 1rem;
   color: var(--texto);
   font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.contato-item a {
+  color: var(--verde);
 }
 
 .contato-form {
@@ -1039,15 +1045,34 @@ footer {
   }
 }
 
-.reveal {
+/* Só esconde o conteúdo se o JS estiver ativo, para não sumir sem ele */
+.js .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.reveal.visible {
+.js .reveal.visible {
   opacity: 1;
   transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* ===== TOAST ===== */
@@ -1105,7 +1130,6 @@ footer {
     display: flex;
   }
 
-  .sobre-grid,
   .contato-grid,
   .transp-inner {
     grid-template-columns: 1fr;
@@ -1131,5 +1155,17 @@ footer {
 
   section {
     padding: 3.5rem 1.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .toast {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
   }
 }

@@ -5,6 +5,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fundação Associação dos Amigos de Lagoa do Piauí – Fundação Filiço Teixeira</title>
+  <meta name="description"
+    content="Entidade sem fins lucrativos de Lagoa do Piauí – PI que atua em assistência social, agricultura familiar, cultura e educação desde 2017." />
+  <meta name="theme-color" content="#1b4332" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Fundação Filiço Teixeira – Associação dos Amigos de Lagoa do Piauí" />
+  <meta property="og:description"
+    content="Inclusão social, formação profissional e fortalecimento da agricultura familiar em Lagoa do Piauí – PI." />
+  <meta property="og:image" content="logo.png" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "Fundação Associação dos Amigos de Lagoa do Piauí – Fundação Filiço Teixeira",
+      "alternateName": "Fundação Filiço Teixeira",
+      "foundingDate": "2017",
+      "taxID": "28.295.504/0001-03",
+      "email": "associacaofundacaofteixeira@gmail.com",
+      "logo": "logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Joana Maria de Alencar, 93, Centro",
+        "addressLocality": "Lagoa do Piauí",
+        "addressRegion": "PI",
+        "postalCode": "64388-000",
+        "addressCountry": "BR"
+      }
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -14,11 +45,12 @@
 </head>
 
 <body>
+  <script>document.documentElement.classList.add('js');</script>
 
   <!-- NAVBAR -->
   <nav>
     <a href="#hero" class="nav-logo">
-      <img src="logo.png" alt="Logo Fundação Associação dos Amigos de Lagoa do Piauí" />
+      <img src="logo.png" alt="Logo Fundação Associação dos Amigos de Lagoa do Piauí" width="44" height="44" />
       <div class="nav-logo-text">
         Fundação Filiço Teixeira
         <span>Associação dos Amigos de Lagoa do Piauí</span>
@@ -30,12 +62,14 @@
       <li><a href="#projetos">Projetos</a></li>
       <li><a href="#certificacoes">Certificações</a></li>
       <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#transparencia">Transparência</a></li>
       <li><a href="#parceiros">Parceiros</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menu" aria-controls="navLinks"
+      aria-expanded="false">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </nav>
 
   <!-- HERO -->
@@ -66,8 +100,8 @@
           <div class="stat-label">Projetos Executados</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">5</div>
-          <div class="stat-label">Certificações Ativas</div>
+          <div class="stat-num">7</div>
+          <div class="stat-label">Certificações e Títulos</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">8+</div>
@@ -85,8 +119,7 @@
         <h2 class="section-title">Sobre a Entidade</h2>
         <div class="section-divider"></div>
       </div>
-      <div class="sobre-grid">
-        <div class="sobre-text reveal">
+      <div class="sobre-text reveal">
           <p>
             A <strong>Fundação Associação dos Amigos de Lagoa do Piauí</strong> é uma entidade não governamental,
             sem fins lucrativos, que atua como organização da sociedade civil comprometida com o
@@ -103,7 +136,6 @@
             Possuímos <strong>Utilidade Pública Municipal</strong> conferida pela Lei nº 121/2021
             e <strong>Utilidade Pública Estadual</strong> pelas Leis nº 7.820 e 7.821 de 2022.
           </p>
-        </div>
       </div>
     </div>
   </section>
@@ -113,7 +145,7 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">O que Fazemos</span>
-        <h2 class="section-title" style="color:#fff">Áreas de Atuação</h2>
+        <h2 class="section-title">Áreas de Atuação</h2>
         <div class="section-divider"></div>
       </div>
       <div class="areas-grid">
@@ -314,39 +346,40 @@
         <div class="section-divider"></div>
       </div>
       <div class="galeria-grid">
-        <div class="galeria-item reveal">
-          <img src="foto1.jpg" alt="Promoção do Curso"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="galeria-placeholder" style="display:none">📸<span>Promoção do Curso</span></div>
-          <div class="galeria-overlay"><span>Curso de Formação Profissional</span></div>
-        </div>
-        <div class="galeria-item reveal">
-          <img src="foto2.jpeg" alt="Promoção do Curso"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="galeria-placeholder" style="display:none">📸<span>Promoção do Curso</span></div>
-          <div class="galeria-overlay"><span>Curso de Formação Profissional</span></div>
-        </div>
-        <div class="galeria-item reveal">
-          <img src="foto3.jpg" alt="Promoção do Curso"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="galeria-placeholder" style="display:none">📸<span>Promoção do Curso</span></div>
-          <div class="galeria-overlay"><span>Curso de Formação Profissional</span></div>
-        </div>
-        <div class="galeria-item reveal">
-          <img src="foto_curso1.jpg" alt="Foto do Curso"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="galeria-placeholder" style="display:none">📷<span>Foto do Curso</span></div>
-          <div class="galeria-overlay"><span>Curso de Formação Profissional</span></div>
-        </div>
-        <div class="galeria-item reveal">
-          <img src="foto_curso2.jpg" alt="Foto do Curso 2"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="galeria-placeholder" style="display:none">🎓<span>Foto do Curso 2</span></div>
-          <div class="galeria-overlay"><span>Participantes da Formação Profissional</span></div>
-        </div>
+        <figure class="galeria-item reveal" tabindex="0" role="button" aria-label="Ampliar foto: Divulgação do curso de formação profissional">
+          <img src="foto1.jpg" alt="Divulgação do curso de formação profissional" width="1600" height="1200" decoding="async" />
+          <div class="galeria-placeholder" style="display:none">📷<span>Foto indisponível</span></div>
+          <figcaption class="galeria-overlay"><span>Curso de Formação Profissional</span></figcaption>
+        </figure>
+        <figure class="galeria-item reveal" tabindex="0" role="button" aria-label="Ampliar foto: Material de divulgação do curso de formação profissional">
+          <img src="foto2.jpeg" alt="Material de divulgação do curso de formação profissional" width="1000" height="461" loading="lazy" decoding="async" />
+          <div class="galeria-placeholder" style="display:none">📷<span>Foto indisponível</span></div>
+          <figcaption class="galeria-overlay"><span>Curso de Formação Profissional</span></figcaption>
+        </figure>
+        <figure class="galeria-item reveal" tabindex="0" role="button" aria-label="Ampliar foto: Registro de atividade do curso de formação profissional">
+          <img src="foto3.jpg" alt="Registro de atividade do curso de formação profissional" width="1600" height="1200" loading="lazy" decoding="async" />
+          <div class="galeria-placeholder" style="display:none">📷<span>Foto indisponível</span></div>
+          <figcaption class="galeria-overlay"><span>Curso de Formação Profissional</span></figcaption>
+        </figure>
+        <figure class="galeria-item reveal" tabindex="0" role="button" aria-label="Ampliar foto: Aula prática do curso de formação profissional">
+          <img src="foto_curso1.jpg" alt="Aula prática do curso de formação profissional" width="1008" height="756" loading="lazy" decoding="async" />
+          <div class="galeria-placeholder" style="display:none">📷<span>Foto indisponível</span></div>
+          <figcaption class="galeria-overlay"><span>Curso de Formação Profissional</span></figcaption>
+        </figure>
+        <figure class="galeria-item reveal" tabindex="0" role="button" aria-label="Ampliar foto: Participantes da formação profissional reunidos">
+          <img src="foto_curso2.jpg" alt="Participantes da formação profissional reunidos" width="1288" height="952" loading="lazy" decoding="async" />
+          <div class="galeria-placeholder" style="display:none">📷<span>Foto indisponível</span></div>
+          <figcaption class="galeria-overlay"><span>Participantes da Formação Profissional</span></figcaption>
+        </figure>
       </div>
     </div>
   </section>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+    <button class="lightbox-close" type="button" aria-label="Fechar foto">&times;</button>
+    <img src="" alt="" id="lightboxImg" />
+    <p id="lightboxCaption"></p>
+  </dialog>
 
   <!-- TRANSPARÊNCIA -->
   <section id="transparencia">
@@ -355,7 +388,7 @@
         <div class="transp-text reveal">
           <span class="section-tag">Prestação de Contas</span>
           <h2 class="section-title">Transparência e Regularidade</h2>
-          <div class="section-divider" style="margin-left:0"></div>
+          <div class="section-divider"></div>
           <p>Mantemos rigoroso compromisso com a transparência e a boa gestão dos recursos públicos e privados. Todas as
             nossas prestações de contas são realizadas tempestivamente e aprovadas pelos órgãos competentes.</p>
         </div>
@@ -458,7 +491,7 @@
         <div class="contato-info reveal">
           <h3>Informações de Contato</h3>
           <div class="contato-item">
-            <div class="contato-icon">📍</div>
+            <div class="contato-icon" aria-hidden="true">📍</div>
             <div>
               <h4>Endereço</h4>
               <p>Rua Joana Maria de Alencar, 93<br>Próximo à BR-316, Bairro Centro<br>Lagoa do Piauí – PI · CEP
@@ -466,52 +499,56 @@
             </div>
           </div>
           <div class="contato-item">
-            <div class="contato-icon">🪪</div>
+            <div class="contato-icon" aria-hidden="true">✉️</div>
+            <div>
+              <h4>E-mail</h4>
+              <p><a href="mailto:associacaofundacaofteixeira@gmail.com">associacaofundacaofteixeira@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-icon" aria-hidden="true">🪪</div>
             <div>
               <h4>CNPJ</h4>
               <p>28.295.504/0001-03</p>
             </div>
           </div>
-          <div class="contato-item">
-          </div>
         </div>
-      </div>
 
-      <div class="contato-form reveal">
-        <h3>Envie uma Mensagem</h3>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Nome</label>
-            <input type="text" id="nome" placeholder="Seu nome completo" />
+        <form class="contato-form reveal" id="contatoForm" novalidate>
+          <h3>Envie uma Mensagem</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel" />
+            </div>
           </div>
           <div class="form-group">
-            <label>Telefone</label>
-            <input type="tel" id="telefone" placeholder="(00) 00000-0000" />
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required />
           </div>
-        </div>
-        <div class="form-group">
-          <label>E-mail</label>
-          <input type="email" id="email" placeholder="seu@email.com" />
-        </div>
-        <div class="form-group">
-          <label>Assunto</label>
-          <select id="assunto">
-            <option value="">Selecione o assunto</option>
-            <option>Parceria Institucional</option>
-            <option>Informações sobre Projetos</option>
-            <option>Assistência Social</option>
-            <option>Agricultura Familiar</option>
-            <option>Cultura e Educação</option>
-            <option>Outros</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Mensagem</label>
-          <textarea id="mensagem" placeholder="Descreva como podemos ajudar..."></textarea>
-        </div>
-        <button class="btn-enviar" onclick="enviarMensagem()">Enviar Mensagem</button>
+          <div class="form-group">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto">
+              <option value="">Selecione o assunto</option>
+              <option>Parceria Institucional</option>
+              <option>Informações sobre Projetos</option>
+              <option>Assistência Social</option>
+              <option>Agricultura Familiar</option>
+              <option>Cultura e Educação</option>
+              <option>Outros</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Descreva como podemos ajudar..." required></textarea>
+          </div>
+          <button class="btn-enviar" type="submit">Enviar Mensagem</button>
+        </form>
       </div>
-    </div>
     </div>
   </section>
 
@@ -533,6 +570,7 @@
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#certificacoes">Certificações</a></li>
             <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#transparencia">Transparência</a></li>
             <li><a href="#parceiros">Parceiros</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
@@ -548,7 +586,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 Fundação Associação dos Amigos de Lagoa do Piauí – Fundação Filiço Teixeira. Todos os direitos
+        <span>© <span id="ano">2026</span> Fundação Associação dos Amigos de Lagoa do Piauí – Fundação Filiço Teixeira. Todos os direitos
           reservados.</span>
         <span>Lagoa do Piauí – PI</span>
       </div>
@@ -556,7 +594,7 @@
   </footer>
 
   <!-- TOAST -->
-  <div class="toast" id="toast">✅ Mensagem enviada! Entraremos em contato em breve.</div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="js/main.js"></script>
 </body>
