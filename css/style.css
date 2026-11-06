@@ -209,9 +209,9 @@ svg {
   width: auto;
 }
 
-/* Menu alinhado à direita, junto do link do Instagram */
+/* Menu logo depois da logomarca, com o Instagram em seguida */
 .menu {
-  margin-left: auto;
+  margin-left: 2.5rem;
 }
 
 .menu ul {
