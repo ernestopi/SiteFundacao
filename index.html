@@ -708,7 +708,13 @@
           </div>
         </div>
 
-        <form class="contato-form reveal" id="contatoForm" novalidate>
+        <!-- Netlify Forms: o Netlify detecta este formulário ao publicar e repassa as mensagens por e-mail -->
+        <form class="contato-form reveal" id="contatoForm" name="contato" method="POST" data-netlify="true"
+          netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="contato" />
+          <p class="campo-oculto" aria-hidden="true">
+            <label>Não preencha este campo: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+          </p>
           <h3>Envie uma mensagem</h3>
           <div class="form-row">
             <div class="form-group">

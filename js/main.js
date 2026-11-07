@@ -91,7 +91,16 @@ function mostrarToast(texto) {
   toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 5000);
 }
-document.getElementById('contatoForm').addEventListener('submit', e => {
+const contatoForm = document.getElementById('contatoForm');
+const botaoEnviar = contatoForm.querySelector('button[type="submit"]');
+
+// Plano B quando o Netlify Forms não responde (ex.: site aberto pelo GitHub Pages)
+function abrirEmail(assunto, corpo) {
+  window.location.href = `mailto:${EMAIL_CONTATO}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+  mostrarToast(`✉️ Abrindo seu aplicativo de e-mail… Se não abrir, escreva para ${EMAIL_CONTATO}`);
+}
+
+contatoForm.addEventListener('submit', async e => {
   e.preventDefault();
   const campo = id => document.getElementById(id).value.trim();
   const nome = campo('nome'), email = campo('email'), mensagem = campo('mensagem');
@@ -105,8 +114,22 @@ document.getElementById('contatoForm').addEventListener('submit', e => {
   }
   const assunto = campo('assunto') || 'Contato pelo site';
   const corpo = `Nome: ${nome}\nE-mail: ${email}\nTelefone: ${campo('telefone')}\nAssunto: ${assunto}\n\nMensagem:\n${mensagem}`;
-  window.location.href = `mailto:${EMAIL_CONTATO}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
-  mostrarToast(`✉️ Abrindo seu aplicativo de e-mail… Se não abrir, escreva para ${EMAIL_CONTATO}`);
+
+  botaoEnviar.disabled = true;
+  try {
+    const resposta = await fetch('/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: new URLSearchParams(new FormData(contatoForm)).toString()
+    });
+    if (!resposta.ok) throw new Error(`HTTP ${resposta.status}`);
+    contatoForm.reset();
+    mostrarToast('✅ Mensagem enviada! Responderemos em breve pelo seu e-mail.');
+  } catch {
+    abrirEmail(assunto, corpo);
+  } finally {
+    botaoEnviar.disabled = false;
+  }
 });
 
 // ===== AVISOS COM DATA DE VALIDADE =====

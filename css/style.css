@@ -1656,3 +1656,9 @@ svg {
     bottom: 1rem;
   }
 }
+
+/* Armadilha contra robôs do formulário: invisível para pessoas */
+.campo-oculto {
+  position: absolute;
+  left: -9999px;
+}
